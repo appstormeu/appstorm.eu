@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AppStorm – znak (chmura, piorun, spadające ekrany aplikacji). Przezroczyste tło, jasne kontury: na ciemne tła. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <g transform="translate(-15 -3)">
+    <path d="M70 128 H186 A28 28 0 0 0 176 74 A44 44 0 0 0 92 66 A32 32 0 0 0 70 128 Z" fill="none" stroke="#E3F2FD" stroke-width="8" stroke-linejoin="round" />
+    <polygon points="138,98 112,146 132,146 118,194 166,132 144,132 158,98" fill="#FFD54F" />
+    <g fill="#64B5F6">
+      <rect x="64" y="148" width="11" height="11" rx="3" /><rect x="78" y="148" width="11" height="11" rx="3" />
+      <rect x="64" y="162" width="11" height="11" rx="3" /><rect x="78" y="162" width="11" height="11" rx="3" opacity="0.5" />
+      <rect x="166" y="150" width="11" height="11" rx="3" /><rect x="180" y="150" width="11" height="11" rx="3" opacity="0.5" />
+      <rect x="166" y="164" width="11" height="11" rx="3" opacity="0.5" /><rect x="180" y="164" width="11" height="11" rx="3" />
+      <rect x="84" y="192" width="9" height="9" rx="2.5" /><rect x="96" y="192" width="9" height="9" rx="2.5" opacity="0.5" />
+      <rect x="84" y="204" width="9" height="9" rx="2.5" opacity="0.5" /><rect x="96" y="204" width="9" height="9" rx="2.5" />
+      <rect x="156" y="194" width="9" height="9" rx="2.5" opacity="0.5" /><rect x="168" y="194" width="9" height="9" rx="2.5" />
+      <rect x="156" y="206" width="9" height="9" rx="2.5" /><rect x="168" y="206" width="9" height="9" rx="2.5" opacity="0.5" />
+    </g>
+  </g>
+</svg>
