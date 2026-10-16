@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekend w regionie – museums, castles, nature and forest camping in Poland | Android app</title>
+<meta name="description" content="Free Android app with weekend ideas in Poland: over 1,000 museums, castles, national parks, nature reserves, forest nature trails, swimming areas and places where you can legally camp in the forest. Works offline, no account, no ads.">
+<meta name="theme-color" content="#0F1630">
+<link rel="canonical" href="https://appstorm.eu/weekend-w-regionie/en.html">
+<link rel="alternate" hreflang="pl" href="https://appstorm.eu/weekend-w-regionie/">
+<link rel="alternate" hreflang="en" href="https://appstorm.eu/weekend-w-regionie/en.html">
+<link rel="alternate" hreflang="x-default" href="https://appstorm.eu/weekend-w-regionie/">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/img/icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Weekend w regionie – weekend ideas in Poland">
+<meta property="og:description" content="Museums, castles, nature, swimming areas and forest camping. Offline, no account, no ads.">
+<meta property="og:image" content="https://appstorm.eu/assets/img/mapa-en.jpg">
+<meta property="og:url" content="https://appstorm.eu/weekend-w-regionie/en.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Weekend w regionie",
+  "operatingSystem": "ANDROID",
+  "applicationCategory": "TravelApplication",
+  "description": "Museums, castles, parks, nature reserves, forest nature trails, swimming areas and forest camping spots in Poland. Works offline, no account, no ads.",
+  "inLanguage": ["pl", "en"],
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "PLN" },
+  "publisher": { "@type": "Organization", "name": "AppStorm", "url": "https://appstorm.eu/" }
+}
+</script>
+<style>
+  @font-face { font-family: "Open Sans"; src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "Open Sans"; src: url("../assets/fonts/OpenSans-Semibold.ttf") format("truetype"); font-weight: 600; font-display: swap; }
+
+  :root {
+    --navy: #0F1630; --navy-2: #1A237E; --ink: #1D2233; --muted: #5A6275; --sky: #E3F2FD;
+    --blue: #1E88E5; --yellow: #FFD54F; --sage: #5B7556; --bg: #FAFBFD; --card: #FFFFFF;
+    --line: #E4E8F0; --accent-ink: #1A237E; --radius: 18px; --shadow: 0 18px 40px rgba(15, 22, 48, 0.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #E7EBF5; --muted: #A9B1C4; --bg: #0B1024; --card: #131A36; --line: #232B4D;
+      --accent-ink: #FFD54F; --blue: #64B5F6; --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; }
+  .wrap { width: min(1120px, 100% - 32px); margin-inline: auto; }
+
+  header { position: sticky; top: 0; z-index: 10; background: rgba(15, 22, 48, 0.88); backdrop-filter: saturate(1.4) blur(10px); }
+  .bar { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .bar img { height: 38px; width: auto; }
+  nav { display: flex; gap: 22px; }
+  nav a { color: var(--sky); text-decoration: none; font-size: 15px; opacity: 0.85; }
+  nav a:hover { opacity: 1; color: var(--yellow); }
+  @media (max-width: 600px) { nav { gap: 14px; } nav a { font-size: 14px; } .bar img { height: 32px; } }
+
+  .hero { color: var(--sky);
+    background: radial-gradient(1100px 520px at 80% -10%, rgba(100, 181, 246, 0.28), transparent 60%),
+                linear-gradient(160deg, var(--navy) 0%, #141D45 55%, var(--navy-2) 100%); }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; padding: 64px 0 80px; }
+  .crumbs { font-size: 14px; color: rgba(227, 242, 253, 0.75); margin-bottom: 14px; }
+  .crumbs a { color: var(--sky); text-decoration: none; }
+  .hero h1 { font-size: clamp(32px, 5vw, 50px); line-height: 1.12; margin: 0 0 16px; font-weight: 600; }
+  .hero h1 em { font-style: normal; color: var(--yellow); }
+  .hero p.lead { font-size: 18px; color: rgba(227, 242, 253, 0.88); max-width: 34em; margin: 0 0 26px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px; font-weight: 600; text-decoration: none; font-size: 15px; }
+  .btn-primary { background: var(--yellow); color: var(--navy); }
+  .btn-ghost { color: var(--sky); border: 1px solid rgba(227, 242, 253, 0.35); }
+  .soon { display: inline-flex; padding: 8px 14px; border-radius: 999px; background: rgba(227, 242, 253, 0.1); border: 1px solid rgba(227, 242, 253, 0.2); font-size: 14px; font-weight: 600; }
+  .phone { border-radius: 26px; padding: 8px; background: #0A0F22; box-shadow: var(--shadow), inset 0 0 0 1px rgba(255, 255, 255, 0.08); max-width: 300px; justify-self: center; }
+  .phone img { border-radius: 19px; }
+  @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; padding: 40px 0 56px; } .phone { max-width: 240px; } }
+
+  section { padding: 72px 0; scroll-margin-top: 64px; }
+  .kicker { color: var(--blue); font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+  h2 { font-size: clamp(26px, 3.6vw, 36px); line-height: 1.2; margin: 8px 0 12px; font-weight: 600; }
+  .section-head { max-width: 46em; margin-bottom: 32px; }
+  .section-head p { color: var(--muted); font-size: 17px; margin: 0; }
+
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media (max-width: 860px) { .grid3 { grid-template-columns: 1fr; } }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .card h3 { margin: 0 0 8px; font-size: 18px; font-weight: 600; }
+  .card p { margin: 0; color: var(--muted); }
+
+  .stats { display: flex; flex-wrap: wrap; gap: 14px 32px; }
+  .stats b { display: block; font-size: 28px; font-weight: 600; color: var(--accent-ink); line-height: 1.2; }
+  .stats span { color: var(--muted); font-size: 14px; }
+
+  .shots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: start; }
+  @media (max-width: 760px) { .shots { grid-template-columns: repeat(2, 1fr); } }
+  .shots figure { margin: 0; }
+  .shots figcaption { text-align: center; color: var(--muted); font-size: 13px; margin-top: 10px; }
+  .shots .phone { max-width: none; }
+  @media (max-width: 520px) { .shots { gap: 8px; } .shots .phone { padding: 5px; border-radius: 18px; } .shots .phone img { border-radius: 13px; } }
+
+  .faq details { border-bottom: 1px solid var(--line); padding: 14px 0; }
+  .faq summary { cursor: pointer; font-weight: 600; }
+  .faq p { margin: 10px 0 0; color: var(--muted); }
+
+  footer { padding: 36px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  footer a { color: var(--blue); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a href="../index.html" aria-label="AppStorm – home page"><img src="../assets/img/appstorm-logo-horizontal-light.svg" alt="AppStorm" width="122" height="38"></a>
+    <nav aria-label="Menu">
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="index.html" lang="pl" hreflang="pl">Polski</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="crumbs"><a href="../index.html">AppStorm</a> › Weekend w regionie</div>
+        <h1>Weekend w regionie: <em>museums, castles, nature</em> and forest camping in Poland</h1>
+        <p class="lead">Free weekend and no plan? The app shows what is worth seeing nearby: museums, castles, national parks, nature reserves, forest nature trails, swimming areas and places where you can legally spend the night in the forest. Works offline, with no account and no ads.</p>
+        <div class="cta">
+          <!-- After the Google Play release, replace "soon" with the button:
+               <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=pl.appstorm.weekendwregionie&amp;hl=en">Get it on Google Play</a> -->
+          <span class="soon">● Coming soon to Google Play</span>
+          <a class="btn btn-ghost" href="#features">See what it does</a>
+        </div>
+      </div>
+      <div class="phone"><img src="../assets/img/nocleg-en.jpg" alt="List of places around Kraków: landscape parks and nature trails, some with a “camping” badge" width="540" height="960"></div>
+    </div>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">What you’ll find</div>
+        <h2>Over 7,300 places from open public data</h2>
+        <p>The data comes from Polish public registers, the Polish State Forests, the European Environment Agency and OpenStreetMap. It is built into the app, and the app downloads newer data on its own.</p>
+      </div>
+      <div class="stats" aria-label="What’s in the app">
+        <div><b>1,000+</b><span>museums</span></div>
+        <div><b>350+</b><span>castles and ruins</span></div>
+        <div><b>1,700+</b><span>nature reserves</span></div>
+        <div><b>1,000+</b><span>forest nature trails</span></div>
+        <div><b>750+</b><span>swimming areas</span></div>
+        <div><b>700+</b><span>forest camping spots</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 0">
+    <div class="wrap">
+      <div class="grid3">
+        <div class="card"><h3>A list and a map around you</h3><p>Places sorted by distance, within 5 to 200 km. You can also search around any town – handy for planning a trip.</p></div>
+        <div class="card"><h3>Forest camping</h3><p>The “Only places with forest camping” filter shows places in the “Zanocuj w lesie” program – “Stay overnight in the forest” – of the Polish State Forests, where you can legally spend the night in the forest.</p></div>
+        <div class="card"><h3>Parks, reserves, trails</h3><p>Boundaries and routes on the map, with parking. Pick a parking lot and navigate straight to it.</p></div>
+        <div class="card"><h3>Places you’ve visited</h3><p>“I’m here” logs a place with one tap. Forgot to log a visit? Add it later from a photo with a saved location.</p></div>
+        <div class="card"><h3>Local flavors</h3><p>Over 2,100 traditional products from every Polish region, worth trying while you are there.</p></div>
+        <div class="card"><h3>Private</h3><p>No account, no ads, no tracking. Your location, favorites and visits stay on your phone only.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 0">
+    <div class="wrap">
+      <div class="shots">
+        <figure><div class="phone"><img src="../assets/img/mapa-en.jpg" alt="Map of Kraków with place pins; visited places have a green check mark" width="540" height="960" loading="lazy"></div><figcaption>Map of the area</figcaption></figure>
+        <figure><div class="phone"><img src="../assets/img/mapa-parku-en.jpg" alt="Map of Ojców National Park with its boundary, access points and the Navigate here button" width="540" height="960" loading="lazy"></div><figcaption>Park boundaries and parking</figcaption></figure>
+        <figure><div class="phone"><img src="../assets/img/zamek-en.jpg" alt="Place card of Wawel Royal Castle with Log visit and Add from photo buttons" width="540" height="960" loading="lazy"></div><figcaption>Place card</figcaption></figure>
+        <figure><div class="phone"><img src="../assets/img/odwiedzone-en.jpg" alt="List of visited places with the number of visits, the last visit date and the seasons" width="540" height="960" loading="lazy"></div><figcaption>Places you’ve visited</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="padding-top: 0">
+    <div class="wrap faq">
+      <div class="section-head">
+        <div class="kicker">FAQ</div>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <details><summary>How much does the app cost?</summary><p>It’s free, with no ads and no account.</p></details>
+      <details><summary>Is the app in English?</summary><p>Yes. The app is in English on phones set to any language other than Polish, and you can switch the language in the “More” tab. Place names, addresses and descriptions from the Polish public registers stay in Polish, as in the official data.</p></details>
+      <details><summary>Does it work offline?</summary><p>Yes. All the data is inside the app, so the list and the place cards work even with no signal. The map uses Google Maps, so the map background needs an internet connection.</p></details>
+      <details><summary>Where does my location go?</summary><p>Nowhere. It is used only on your phone, to sort places by distance and to log visits. Details are in the <a href="privacy-policy.html">privacy policy</a>.</p></details>
+      <details><summary>Where does the data come from?</summary><p>From open public data: dane.gov.pl, the General Directorate for Environmental Protection, the Polish Geological Institute, the National Heritage Board of Poland, the Polish State Forests, the European Environment Agency and OpenStreetMap. The full list is in the app, in the “More” tab.</p></details>
+      <details><summary>Is this an official government app?</summary><p>No. Weekend w regionie is an independent app. It is not affiliated with any government office or public institution. Before you go, check the opening hours on the place’s website.</p></details>
+      <details><summary>I found an error in the data. What should I do?</summary><p>Write to <a href="mailto:kontakt@appstorm.eu?subject=Weekend%20w%20regionie">kontakt@appstorm.eu</a>. The data in the app is updated every week.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 AppStorm Tomasz Jagielski · <a href="../index.html">appstorm.eu</a></span>
+    <span><a href="privacy-policy.html">Privacy policy</a> · <a href="index.html" lang="pl" hreflang="pl">Wersja polska</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

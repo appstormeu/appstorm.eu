@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekend w regionie – muzea, zamki, przyroda i nocleg w lesie | aplikacja na Androida</title>
+<meta name="description" content="Bezpłatna aplikacja na Androida: ponad 1000 muzeów, zamki, parki narodowe, rezerwaty, leśne ścieżki przyrodnicze i dydaktyczne, kąpieliska i miejsca, gdzie legalnie przenocujesz w lesie. Działa offline, bez konta i bez reklam.">
+<meta name="theme-color" content="#0F1630">
+<link rel="canonical" href="https://appstorm.eu/weekend-w-regionie/">
+<link rel="alternate" hreflang="pl" href="https://appstorm.eu/weekend-w-regionie/">
+<link rel="alternate" hreflang="en" href="https://appstorm.eu/weekend-w-regionie/en.html">
+<link rel="alternate" hreflang="x-default" href="https://appstorm.eu/weekend-w-regionie/">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/img/icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Weekend w regionie – pomysły na weekend w okolicy">
+<meta property="og:description" content="Muzea, zamki, przyroda, kąpieliska i nocleg w lesie. Offline, bez konta i bez reklam.">
+<meta property="og:image" content="https://appstorm.eu/assets/img/mapa.jpg">
+<meta property="og:url" content="https://appstorm.eu/weekend-w-regionie/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Weekend w regionie",
+  "operatingSystem": "ANDROID",
+  "applicationCategory": "TravelApplication",
+  "description": "Muzea, zamki, parki, rezerwaty, leśne ścieżki, kąpieliska i miejsca noclegu w lesie w okolicy. Działa offline, bez konta i bez reklam.",
+  "inLanguage": ["pl", "en"],
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "PLN" },
+  "publisher": { "@type": "Organization", "name": "AppStorm", "url": "https://appstorm.eu/" }
+}
+</script>
+<style>
+  @font-face { font-family: "Open Sans"; src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "Open Sans"; src: url("../assets/fonts/OpenSans-Semibold.ttf") format("truetype"); font-weight: 600; font-display: swap; }
+
+  :root {
+    --navy: #0F1630; --navy-2: #1A237E; --ink: #1D2233; --muted: #5A6275; --sky: #E3F2FD;
+    --blue: #1E88E5; --yellow: #FFD54F; --sage: #5B7556; --bg: #FAFBFD; --card: #FFFFFF;
+    --line: #E4E8F0; --accent-ink: #1A237E; --radius: 18px; --shadow: 0 18px 40px rgba(15, 22, 48, 0.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #E7EBF5; --muted: #A9B1C4; --bg: #0B1024; --card: #131A36; --line: #232B4D;
+      --accent-ink: #FFD54F; --blue: #64B5F6; --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; }
+  .wrap { width: min(1120px, 100% - 32px); margin-inline: auto; }
+
+  header { position: sticky; top: 0; z-index: 10; background: rgba(15, 22, 48, 0.88); backdrop-filter: saturate(1.4) blur(10px); }
+  .bar { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .bar img { height: 38px; width: auto; }
+  nav { display: flex; gap: 22px; }
+  nav a { color: var(--sky); text-decoration: none; font-size: 15px; opacity: 0.85; }
+  nav a:hover { opacity: 1; color: var(--yellow); }
+  @media (max-width: 600px) { nav { gap: 14px; } nav a { font-size: 14px; } .bar img { height: 32px; } }
+
+  .hero { color: var(--sky);
+    background: radial-gradient(1100px 520px at 80% -10%, rgba(100, 181, 246, 0.28), transparent 60%),
+                linear-gradient(160deg, var(--navy) 0%, #141D45 55%, var(--navy-2) 100%); }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; padding: 64px 0 80px; }
+  .crumbs { font-size: 14px; color: rgba(227, 242, 253, 0.75); margin-bottom: 14px; }
+  .crumbs a { color: var(--sky); text-decoration: none; }
+  .hero h1 { font-size: clamp(32px, 5vw, 50px); line-height: 1.12; margin: 0 0 16px; font-weight: 600; }
+  .hero h1 em { font-style: normal; color: var(--yellow); }
+  .hero p.lead { font-size: 18px; color: rgba(227, 242, 253, 0.88); max-width: 34em; margin: 0 0 26px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px; font-weight: 600; text-decoration: none; font-size: 15px; }
+  .btn-primary { background: var(--yellow); color: var(--navy); }
+  .btn-ghost { color: var(--sky); border: 1px solid rgba(227, 242, 253, 0.35); }
+  .soon { display: inline-flex; padding: 8px 14px; border-radius: 999px; background: rgba(227, 242, 253, 0.1); border: 1px solid rgba(227, 242, 253, 0.2); font-size: 14px; font-weight: 600; }
+  .phone { border-radius: 26px; padding: 8px; background: #0A0F22; box-shadow: var(--shadow), inset 0 0 0 1px rgba(255, 255, 255, 0.08); max-width: 300px; justify-self: center; }
+  .phone img { border-radius: 19px; }
+  @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; padding: 40px 0 56px; } .phone { max-width: 240px; } }
+
+  section { padding: 72px 0; scroll-margin-top: 64px; }
+  .kicker { color: var(--blue); font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+  h2 { font-size: clamp(26px, 3.6vw, 36px); line-height: 1.2; margin: 8px 0 12px; font-weight: 600; }
+  .section-head { max-width: 46em; margin-bottom: 32px; }
+  .section-head p { color: var(--muted); font-size: 17px; margin: 0; }
+
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media (max-width: 860px) { .grid3 { grid-template-columns: 1fr; } }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .card h3 { margin: 0 0 8px; font-size: 18px; font-weight: 600; }
+  .card p { margin: 0; color: var(--muted); }
+
+  .stats { display: flex; flex-wrap: wrap; gap: 14px 32px; }
+  .stats b { display: block; font-size: 28px; font-weight: 600; color: var(--accent-ink); line-height: 1.2; }
+  .stats span { color: var(--muted); font-size: 14px; }
+
+  .shots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: start; }
+  @media (max-width: 760px) { .shots { grid-template-columns: repeat(2, 1fr); } }
+  .shots figure { margin: 0; }
+  .shots figcaption { text-align: center; color: var(--muted); font-size: 13px; margin-top: 10px; }
+  .shots .phone { max-width: none; }
+  @media (max-width: 520px) { .shots { gap: 8px; } .shots .phone { padding: 5px; border-radius: 18px; } .shots .phone img { border-radius: 13px; } }
+
+  .faq details { border-bottom: 1px solid var(--line); padding: 14px 0; }
+  .faq summary { cursor: pointer; font-weight: 600; }
+  .faq p { margin: 10px 0 0; color: var(--muted); }
+
+  footer { padding: 36px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  footer a { color: var(--blue); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a href="../index.html" aria-label="AppStorm – strona główna"><img src="../assets/img/appstorm-logo-horizontal-light.svg" alt="AppStorm" width="122" height="38"></a>
+    <nav aria-label="Menu">
+      <a href="#funkcje">Funkcje</a>
+      <a href="#pytania">Pytania</a>
+      <a href="polityka-prywatnosci.html">Prywatność</a>
+      <a href="en.html" lang="en" hreflang="en">English</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="crumbs"><a href="../index.html">AppStorm</a> › Weekend w regionie</div>
+        <h1>Weekend w regionie: <em>muzea, zamki, przyroda</em> i nocleg w lesie</h1>
+        <p class="lead">Wolny weekend i brak pomysłu? Aplikacja pokazuje, co warto zobaczyć w okolicy: muzea, zamki, parki narodowe, rezerwaty, leśne ścieżki, kąpieliska i miejsca, gdzie legalnie przenocujesz w lesie. Działa bez internetu, bez konta i bez reklam.</p>
+        <div class="cta">
+          <!-- Po publikacji w Google Play zastąp „soon” przyciskiem:
+               <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=pl.appstorm.weekendwregionie">Pobierz z Google Play</a> -->
+          <span class="soon">● Wkrótce w Google Play</span>
+          <a class="btn btn-ghost" href="#funkcje">Zobacz, co potrafi</a>
+        </div>
+      </div>
+      <div class="phone"><img src="../assets/img/nocleg.jpg" alt="Lista miejsc w okolicy Krakowa: parki krajobrazowe i leśne ścieżki, część z plakietką „nocleg”" width="540" height="960"></div>
+    </div>
+  </div>
+
+  <section id="funkcje">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Co znajdziesz</div>
+        <h2>Ponad 7 300 miejsc z otwartych danych publicznych</h2>
+        <p>Dane pochodzą z rejestrów państwowych, Lasów Państwowych, Europejskiej Agencji Środowiska i OpenStreetMap. Aplikacja ma je w środku, a nowsze pobiera sama.</p>
+      </div>
+      <div class="stats" aria-label="Zawartość aplikacji">
+        <div><b>1 000+</b><span>muzeów</span></div>
+        <div><b>350+</b><span>zamków i ruin</span></div>
+        <div><b>1 700+</b><span>rezerwatów przyrody</span></div>
+        <div><b>1 000+</b><span>leśnych ścieżek przyrodniczych i dydaktycznych</span></div>
+        <div><b>750+</b><span>kąpielisk</span></div>
+        <div><b>700+</b><span>miejsc noclegu w lesie</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 0">
+    <div class="wrap">
+      <div class="grid3">
+        <div class="card"><h3>Lista i mapa wokół Ciebie</h3><p>Miejsca posortowane według odległości, z promieniem od 5 do 200 km. Możesz też szukać wokół dowolnej miejscowości, np. przed wyjazdem.</p></div>
+        <div class="card"><h3>Nocleg w lesie</h3><p>Filtr „Tylko z noclegiem w lesie” pokazuje miejsca objęte programem „Zanocuj w lesie” Lasów Państwowych.</p></div>
+        <div class="card"><h3>Parki, rezerwaty, ścieżki</h3><p>Granice i przebieg na mapie oraz parkingi. Wybierasz parking i nawigujesz prosto do niego.</p></div>
+        <div class="card"><h3>Odwiedzone miejsca</h3><p>„Jestem na miejscu” zalicza miejsce jednym stuknięciem. Zapomniane wizyty dodasz ze zdjęcia z zapisaną lokalizacją.</p></div>
+        <div class="card"><h3>Smaki regionu</h3><p>Ponad 2 100 produktów tradycyjnych z każdego województwa, które warto spróbować na miejscu.</p></div>
+        <div class="card"><h3>Prywatnie</h3><p>Bez konta, reklam i śledzenia. Lokalizacja, ulubione i odwiedziny zostają wyłącznie na Twoim telefonie.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 0">
+    <div class="wrap">
+      <div class="shots">
+        <figure><div class="phone"><img src="../assets/img/mapa.jpg" alt="Mapa z pinezkami miejsc wokół Krakowa; odwiedzone mają zielony znaczek" width="540" height="960" loading="lazy"></div><figcaption>Mapa okolicy</figcaption></figure>
+        <figure><div class="phone"><img src="../assets/img/mapa-parku.jpg" alt="Mapa Ojcowskiego Parku Narodowego z granicą parku, punktami dojazdu i przyciskiem Nawiguj tutaj" width="540" height="960" loading="lazy"></div><figcaption>Granice parku i dojazd</figcaption></figure>
+        <figure><div class="phone"><img src="../assets/img/zamek.jpg" alt="Karta Zamku Królewskiego na Wawelu z przyciskami Zalicz wizytę i Dodaj ze zdjęcia" width="540" height="960" loading="lazy"></div><figcaption>Karta miejsca</figcaption></figure>
+        <figure><div class="phone"><img src="../assets/img/odwiedzone.jpg" alt="Lista odwiedzonych miejsc z liczbą wizyt, datą ostatniej wizyty i porami roku" width="540" height="960" loading="lazy"></div><figcaption>Odwiedzone miejsca</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="pytania" style="padding-top: 0">
+    <div class="wrap faq">
+      <div class="section-head">
+        <div class="kicker">Pytania</div>
+        <h2>Najczęstsze pytania</h2>
+      </div>
+      <details><summary>Ile kosztuje aplikacja?</summary><p>Jest bezpłatna, bez reklam i bez konta.</p></details>
+      <details><summary>Czy działa bez internetu?</summary><p>Tak. Wszystkie dane są w aplikacji, więc lista i karty miejsc działają także bez zasięgu. Mapa korzysta z map Google, więc do jej podkładu potrzebny jest internet.</p></details>
+      <details><summary>Gdzie trafia moja lokalizacja?</summary><p>Nigdzie. Jest używana tylko na telefonie, żeby posortować miejsca według odległości i zaliczyć wizytę. Szczegóły w <a href="polityka-prywatnosci.html">polityce prywatności</a>.</p></details>
+      <details><summary>Skąd są dane?</summary><p>Z otwartych danych publicznych: dane.gov.pl, Generalna Dyrekcja Ochrony Środowiska, Państwowy Instytut Geologiczny, Narodowy Instytut Dziedzictwa, Lasy Państwowe, Europejska Agencja Środowiska i OpenStreetMap. Pełna lista jest w aplikacji w zakładce „Więcej”.</p></details>
+      <details><summary>Czy to aplikacja urzędowa?</summary><p>Nie. Weekend w regionie jest aplikacją niezależną i nie jest powiązana z żadnym urzędem ani instytucją publiczną. Przed wyjazdem sprawdź godziny otwarcia na stronie danego miejsca.</p></details>
+      <details><summary>Znalazłem błąd w danych. Co robić?</summary><p>Napisz na <a href="mailto:kontakt@appstorm.eu?subject=Weekend%20w%20regionie">kontakt@appstorm.eu</a>. Dane w aplikacji są aktualizowane co tydzień.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 AppStorm Tomasz Jagielski · <a href="../index.html">appstorm.eu</a></span>
+    <span><a href="polityka-prywatnosci.html">Polityka prywatności</a> · <a href="en.html" lang="en" hreflang="en">English version</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
