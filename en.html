@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AppStorm – software and mobile apps</title>
+<meta name="description" content="AppStorm designs and builds software: mobile apps, web apps and data processing tools. Fast, simple and respectful of privacy.">
+<meta name="theme-color" content="#0F1630">
+<link rel="canonical" href="https://appstorm.eu/en.html">
+<link rel="alternate" hreflang="pl" href="https://appstorm.eu/">
+<link rel="alternate" hreflang="en" href="https://appstorm.eu/en.html">
+<link rel="alternate" hreflang="x-default" href="https://appstorm.eu/">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="AppStorm – software and mobile apps">
+<meta property="og:description" content="Mobile apps, web apps and data processing tools.">
+<meta property="og:image" content="https://appstorm.eu/assets/img/icon-192.png">
+<meta property="og:url" content="https://appstorm.eu/en.html">
+<style>
+  @font-face { font-family: "Open Sans"; src: url("assets/fonts/OpenSans-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "Open Sans"; src: url("assets/fonts/OpenSans-Semibold.ttf") format("truetype"); font-weight: 600; font-display: swap; }
+
+  :root {
+    --navy: #0F1630;
+    --navy-2: #1A237E;
+    --ink: #1D2233;
+    --muted: #5A6275;
+    --sky: #E3F2FD;
+    --blue: #1E88E5;
+    --yellow: #FFD54F;
+    --sage: #5B7556;
+    --bg: #FAFBFD;
+    --card: #FFFFFF;
+    --line: #E4E8F0;
+    --accent-ink: #1A237E;
+    --radius: 18px;
+    --shadow: 0 18px 40px rgba(15, 22, 48, 0.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #E7EBF5; --muted: #A9B1C4; --bg: #0B1024; --card: #131A36; --line: #232B4D;
+      --accent-ink: #FFD54F; --blue: #64B5F6; --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; }
+  .wrap { width: min(1120px, 100% - 32px); margin-inline: auto; }
+
+  /* Nagłówek */
+  header { position: sticky; top: 0; z-index: 10; background: rgba(15, 22, 48, 0.88); backdrop-filter: saturate(1.4) blur(10px); }
+  .bar { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .bar img { height: 38px; width: auto; }
+  nav { display: flex; gap: 22px; }
+  nav a { color: var(--sky); text-decoration: none; font-size: 15px; opacity: 0.85; }
+  nav a:hover { opacity: 1; color: var(--yellow); }
+  @media (max-width: 600px) { nav { gap: 14px; } nav a { font-size: 14px; } .bar img { height: 32px; } nav a.optional { display: none; } }
+
+  /* Hero */
+  .hero { position: relative; overflow: hidden; color: var(--sky);
+    background: radial-gradient(1100px 520px at 80% -10%, rgba(100, 181, 246, 0.28), transparent 60%),
+                radial-gradient(800px 400px at 0% 110%, rgba(255, 213, 79, 0.12), transparent 60%),
+                linear-gradient(160deg, var(--navy) 0%, #141D45 55%, var(--navy-2) 100%); }
+  .hero .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; padding: 84px 0 96px; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; background: rgba(227, 242, 253, 0.1); border: 1px solid rgba(227, 242, 253, 0.18); font-size: 13px; letter-spacing: 0.02em; }
+  .eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--yellow); box-shadow: 0 0 12px var(--yellow); }
+  .hero h1 { font-size: clamp(34px, 5.2vw, 56px); line-height: 1.1; margin: 18px 0 18px; font-weight: 600; letter-spacing: -0.01em; }
+  .hero h1 em { font-style: normal; color: var(--yellow); }
+  .hero p.lead { font-size: 18px; color: rgba(227, 242, 253, 0.85); max-width: 34em; margin: 0 0 30px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px; font-weight: 600; text-decoration: none; font-size: 15px; transition: transform 0.15s ease; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--yellow); color: var(--navy); box-shadow: 0 10px 24px rgba(255, 213, 79, 0.25); }
+  .btn-ghost { color: var(--sky); border: 1px solid rgba(227, 242, 253, 0.35); }
+  .btn-ghost:hover { border-color: var(--yellow); color: var(--yellow); }
+
+  .storm { position: relative; aspect-ratio: 1; max-width: 420px; width: 100%; justify-self: center; }
+  .storm::before { content: ""; position: absolute; inset: 12%; border-radius: 50%; background: radial-gradient(circle, rgba(100, 181, 246, 0.35), transparent 70%); filter: blur(10px); }
+  .storm img { position: relative; width: 100%; height: 100%; }
+  .chip { position: absolute; padding: 8px 14px; border-radius: 12px; font-size: 14px; font-weight: 600; background: rgba(227, 242, 253, 0.1); border: 1px solid rgba(227, 242, 253, 0.2); backdrop-filter: blur(6px); white-space: nowrap; }
+  .chip::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; background: var(--yellow); vertical-align: 1px; }
+  .chip.c2::before { background: #64B5F6; }
+  .chip.c3::before { background: #A3BB9B; }
+  .chip.c1 { top: 8%; left: -4%; }
+  .chip.c2 { top: 44%; right: -6%; }
+  .chip.c3 { bottom: 6%; left: 6%; }
+  @media (max-width: 860px) {
+    .hero .wrap { grid-template-columns: 1fr; padding: 56px 0 64px; }
+    .storm { max-width: 300px; }
+    .chip.c1 { left: -8%; top: 0; } .chip.c2 { right: -6%; }
+  }
+
+  /* Sekcje */
+  section { padding: 88px 0; scroll-margin-top: 64px; }
+  .section-head { max-width: 46em; margin-bottom: 40px; }
+  .kicker { color: var(--blue); font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+  h2 { font-size: clamp(26px, 3.6vw, 38px); line-height: 1.2; margin: 8px 0 12px; font-weight: 600; }
+  .section-head p { color: var(--muted); font-size: 17px; margin: 0; }
+
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media (max-width: 860px) { .grid3 { grid-template-columns: 1fr; } }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+  .card h3 { margin: 0 0 8px; font-size: 19px; font-weight: 600; }
+  .card p { margin: 0; color: var(--muted); }
+  .ico { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 16px; background: var(--navy); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+  .tags span { font-size: 12px; padding: 3px 10px; border-radius: 999px; background: rgba(30, 136, 229, 0.1); color: var(--blue); font-weight: 600; }
+
+  /* Projekty */
+  .projects-bg { background: linear-gradient(180deg, transparent, rgba(30, 136, 229, 0.06)); }
+  .project { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 28px; padding: 36px; box-shadow: var(--shadow); }
+  .app-title { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+  .app-icon { width: 56px; height: 56px; border-radius: 16px; background: var(--sage); display: grid; place-items: center; flex: none; }
+  .app-title h3 { margin: 0; font-size: 24px; font-weight: 600; }
+  .app-title span { color: var(--muted); font-size: 14px; }
+  .status { display: inline-flex; align-items: center; gap: 8px; margin: 4px 0 16px; padding: 6px 12px; border-radius: 999px; background: rgba(91, 117, 86, 0.12); color: var(--sage); font-weight: 600; font-size: 13px; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .status { color: #A3BB9B; background: rgba(163, 187, 155, 0.12); } }
+  .project p { color: var(--muted); margin: 0 0 16px; }
+  ul.features { list-style: none; padding: 0; margin: 0 0 20px; display: grid; gap: 8px; }
+  ul.features li { display: flex; gap: 10px; align-items: flex-start; }
+  ul.features li::before { content: ""; flex: none; width: 20px; height: 20px; margin-top: 3px; border-radius: 50%;
+    background: var(--sage) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat; }
+  .stats { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 0 0 20px; }
+  .stats div b { display: block; font-size: 22px; font-weight: 600; color: var(--accent-ink); line-height: 1.2; }
+  .stats div span { color: var(--muted); font-size: 13px; }
+  .links { display: flex; flex-wrap: wrap; gap: 16px; font-size: 14px; }
+  .links a { color: var(--blue); text-decoration: none; font-weight: 600; }
+  .links a:hover { text-decoration: underline; }
+
+  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
+  .gallery figure { margin: 0; }
+  .phone { border-radius: 26px; padding: 8px; background: #0A0F22; box-shadow: var(--shadow), inset 0 0 0 1px rgba(255, 255, 255, 0.08); }
+  .phone img { border-radius: 19px; }
+  .gallery figure:nth-child(2) { margin-top: 32px; }
+  .gallery figcaption { text-align: center; color: var(--muted); font-size: 13px; margin-top: 10px; }
+  @media (max-width: 920px) { .project { grid-template-columns: 1fr; padding: 24px; } }
+  @media (max-width: 520px) { .gallery { gap: 8px; } .phone { padding: 5px; border-radius: 18px; } .phone img { border-radius: 13px; } }
+
+  .next { margin-top: 20px; border: 2px dashed var(--line); border-radius: 28px; padding: 28px 32px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; }
+  .next h3 { margin: 0 0 4px; font-size: 19px; font-weight: 600; }
+  .next p { margin: 0; color: var(--muted); }
+  .next a { color: var(--blue); font-weight: 600; text-decoration: none; white-space: nowrap; }
+  .next a:hover { text-decoration: underline; }
+
+  /* Współpraca */
+  .partner { border-radius: 28px; padding: 48px; color: var(--sky); background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%); display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 32px; align-items: center; position: relative; overflow: hidden; }
+  .partner::after { content: ""; position: absolute; right: -60px; bottom: -80px; width: 320px; height: 320px; background: url("assets/img/appstorm-mark-light.svg") center/contain no-repeat; opacity: 0.08; }
+  .partner h2 { color: #fff; }
+  .partner p { color: rgba(227, 242, 253, 0.85); margin: 0; font-size: 17px; }
+  .partner .cta { justify-content: flex-end; position: relative; z-index: 1; }
+  @media (max-width: 860px) { .partner { grid-template-columns: 1fr; padding: 32px; } .partner .cta { justify-content: flex-start; } }
+
+  /* Kontakt */
+  .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .contact .card h3 { font-size: 17px; color: var(--muted); margin-bottom: 10px; }
+  .mail { font-size: clamp(20px, 3vw, 28px); font-weight: 600; color: var(--blue); text-decoration: none; word-break: break-all; }
+  .mail:hover { text-decoration: underline; }
+  dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; }
+  dt { color: var(--muted); }
+  dd { margin: 0; font-weight: 600; }
+  @media (max-width: 760px) { .contact { grid-template-columns: 1fr; } }
+
+  footer { padding: 36px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a href="#" aria-label="AppStorm – home page"><img src="assets/img/appstorm-logo-horizontal-light.svg" alt="AppStorm" width="122" height="38"></a>
+    <nav aria-label="Menu">
+      <a href="#what-we-do" class="optional">What we do</a>
+      <a href="#projects">Projects</a>
+      <a href="#how-we-work" class="optional">How we work</a>
+      <a href="#contact">Contact</a>
+      <a href="index.html" lang="pl" hreflang="pl">Polski</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Software development</span>
+        <h1>Software that <em>just works</em></h1>
+        <p class="lead">AppStorm designs and builds software: mobile apps, web apps and data processing tools. We focus on speed, simplicity and respect for users’ privacy.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#projects">See our projects</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="storm" aria-hidden="true">
+        <img src="assets/img/appstorm-mark-light.svg" alt="" width="240" height="240">
+        <span class="chip c1">Mobile apps</span>
+        <span class="chip c2">Web</span>
+        <span class="chip c3">Data</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="what-we-do">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">What we do</div>
+        <h2>From idea to a working product</h2>
+        <p>We build our own products and help with other projects – from the prototype, through the store release, to maintenance and updates.</p>
+      </div>
+      <div class="grid3">
+        <div class="card">
+          <div class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFD54F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div>
+          <h3>Mobile apps</h3>
+          <p>Fast Android apps that also work offline. Release on Google Play and further development.</p>
+          <div class="tags"><span>Android</span><span>.NET MAUI</span><span>offline</span></div>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFD54F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="15" rx="2"/><path d="M2 8h20"/><path d="M9 13l-2 2 2 2"/><path d="M15 13l2 2-2 2"/></svg></div>
+          <h3>Web apps</h3>
+          <p>Websites, admin panels and web services – lightweight, secure and easy to maintain.</p>
+          <div class="tags"><span>C# / .NET</span><span>API</span><span>web</span></div>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFD54F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
+          <h3>Data processing</h3>
+          <p>Collecting, joining and cleaning data from many sources, including open public data and spatial data, with automatic updates.</p>
+          <div class="tags"><span>ETL</span><span>open data</span><span>GIS</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Projects</div>
+        <h2>Our products</h2>
+        <p>Our own apps, which we design, develop and maintain ourselves.</p>
+      </div>
+
+      <article class="project">
+        <div>
+          <div class="app-title">
+            <div class="app-icon" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F7F8F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l6-12 4 7 3-4 5 9z"/><circle cx="17" cy="6" r="2"/></svg>
+            </div>
+            <div>
+              <h3>Weekend w regionie</h3>
+              <span>Android · free</span>
+            </div>
+          </div>
+          <div class="status">● Coming soon to Google Play</div>
+          <p>Weekend ideas in Poland: museums, castles, national parks, nature reserves, forest trails and swimming areas, sorted by distance. Works offline, with no account and no ads.</p>
+          <div class="stats" aria-label="What’s in the app">
+            <div><b>7,300+</b><span>places</span></div>
+            <div><b>1,000+</b><span>museums</span></div>
+            <div><b>1,700+</b><span>nature reserves</span></div>
+            <div><b>1,000+</b><span>forest trails</span></div>
+            <div><b>750+</b><span>swimming areas</span></div>
+          </div>
+          <ul class="features">
+            <li>Data from public registers, the Polish State Forests, the EEA and Wikidata</li>
+            <li>Where you can legally spend the night in the forest nearby</li>
+            <li>Log the places you visit – on site or from your photos</li>
+            <li>Local flavors – traditional products from every Polish region</li>
+          </ul>
+          <div class="links">
+            <a href="weekend-w-regionie/en.html">App page</a>
+            <a href="weekend-w-regionie/privacy-policy.html">Privacy policy</a>
+            <a href="mailto:kontakt@appstorm.eu?subject=Weekend%20w%20regionie">Send feedback</a>
+          </div>
+        </div>
+        <div class="gallery">
+          <figure><div class="phone"><img src="assets/img/nocleg-en.jpg" alt="Landscape parks and forest trails around Kraków with a camping badge; a visited park has a green check mark" width="540" height="960" loading="lazy"></div><figcaption>Places nearby</figcaption></figure>
+          <figure><div class="phone"><img src="assets/img/mapa-en.jpg" alt="Map with place pins around Kraków; visited places have a green check mark" width="540" height="960" loading="lazy"></div><figcaption>Map of the area</figcaption></figure>
+          <figure><div class="phone"><img src="assets/img/zamek-en.jpg" alt="Place card of Wawel Royal Castle with Log visit and Add from photo buttons" width="540" height="960" loading="lazy"></div><figcaption>Place card</figcaption></figure>
+        </div>
+      </article>
+
+      <div class="next">
+        <div>
+          <h3>More projects on the way</h3>
+          <p>We are working on more apps. Want to hear about them first?</p>
+        </div>
+        <a href="mailto:kontakt@appstorm.eu?subject=New%20AppStorm%20projects">Let us know →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-we-work">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">How we work</div>
+        <h2>Simple products, fair rules</h2>
+      </div>
+      <div class="grid3">
+        <div class="card">
+          <div class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFD54F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Privacy by default</h3>
+          <p>We collect only what is necessary. No needless accounts, ads or trackers – your data stays with you.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFD54F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
+          <h3>Speed and reliability</h3>
+          <p>Apps should start fast and keep working with a weak signal. We measure performance instead of guessing.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFD54F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/><path d="M8 11l2 2 4-4"/></svg></div>
+          <h3>Reliable data</h3>
+          <p>We use trusted sources, state where the data comes from and under which license, and prepare updates automatically.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work-with-us" style="padding-top: 0">
+    <div class="wrap">
+      <div class="partner">
+        <div>
+          <div class="kicker" style="color: var(--yellow)">Work with us</div>
+          <h2>Have an idea for an app or a data-driven project?</h2>
+          <p>We’re happy to talk about a new product, developing an existing solution or a joint project. Write a few sentences about what you need.</p>
+        </div>
+        <div class="cta">
+          <a class="btn btn-primary" href="mailto:kontakt@appstorm.eu?subject=Working%20together">Let’s talk</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-top: 0">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Contact</div>
+        <h2>Get in touch</h2>
+        <p>Questions, feedback on our apps, partnership proposals.</p>
+      </div>
+      <div class="contact">
+        <div class="card">
+          <h3>E-mail</h3>
+          <a class="mail" href="mailto:kontakt@appstorm.eu">kontakt@appstorm.eu</a>
+        </div>
+        <div class="card">
+          <h3>Company details</h3>
+          <dl>
+            <dt>Company</dt><dd>AppStorm Tomasz Jagielski</dd>
+            <dt>Tax ID (NIP)</dt><dd>8681879686</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 AppStorm Tomasz Jagielski · <a href="index.html" lang="pl" hreflang="pl">Wersja polska</a></span>
+    <span>This site uses no cookies and no analytics.</span>
+  </div>
+</footer>
+
+</body>
+</html>
