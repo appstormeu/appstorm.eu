@@ -1,0 +1,944 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jesienne weekendy: zamki, historia i kolorowe lasy w każdym województwie | Weekend w regionie</title>
+<meta name="description" content="Pomysły na jesienny weekend: zamki, muzea wojskowe, Pomniki Historii, buczyny i parki – po kilka miejsc w każdym województwie.">
+<meta name="theme-color" content="#0F1630">
+<link rel="canonical" href="https://appstorm.eu/weekend-w-regionie/jesienne-weekendy.html">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/img/icon-192.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jesienne weekendy: zamki, historia i kolorowe lasy w każdym województwie">
+<meta property="og:description" content="Pomysły na jesienny weekend: zamki, muzea wojskowe, Pomniki Historii, buczyny i parki – po kilka miejsc w każdym województwie.">
+<meta property="og:image" content="https://appstorm.eu/assets/img/11-listopada/heritage-ph-15465.jpg">
+<meta property="og:url" content="https://appstorm.eu/weekend-w-regionie/jesienne-weekendy.html">
+<style>
+  @font-face { font-family: "Open Sans"; src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "Open Sans"; src: url("../assets/fonts/OpenSans-Semibold.ttf") format("truetype"); font-weight: 600; font-display: swap; }
+  :root {
+    --navy: #0F1630; --navy-2: #1A237E; --ink: #1D2233; --muted: #5A6275; --sky: #E3F2FD;
+    --blue: #1E88E5; --yellow: #FFD54F; --sage: #5B7556; --bg: #FAFBFD; --card: #FFFFFF;
+    --line: #E4E8F0; --history: #8C3B2E; --autumn: #9A5B12; --radius: 18px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #E7EBF5; --muted: #A9B1C4; --bg: #0B1024; --card: #131A36; --line: #232B4D;
+      --blue: #64B5F6; --history: #F0A493; --autumn: #F2C078;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; }
+  .wrap { width: min(1120px, 100% - 32px); margin-inline: auto; }
+  header { position: sticky; top: 0; z-index: 10; background: rgba(15, 22, 48, 0.88); backdrop-filter: saturate(1.4) blur(10px); }
+  .bar { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .bar img { height: 38px; width: auto; }
+  .bar .app { color: var(--sky); text-decoration: none; font-size: 15px; opacity: 0.85; }
+  .bar .app:hover { opacity: 1; color: var(--yellow); }
+  @media (max-width: 600px) { .bar img { height: 32px; } .bar .app { font-size: 14px; } }
+  .hero { color: var(--sky);
+    background: radial-gradient(1100px 520px at 80% -10%, rgba(255, 213, 79, 0.18), transparent 60%),
+                linear-gradient(160deg, var(--navy) 0%, #141D45 55%, var(--navy-2) 100%); }
+  .hero .wrap { padding: 56px 0 64px; max-width: 780px; margin-inline: auto; width: min(780px, 100% - 32px); }
+  .crumbs { font-size: 14px; color: rgba(227, 242, 253, 0.75); margin-bottom: 14px; }
+  .crumbs a { color: var(--sky); text-decoration: none; }
+  .hero h1 { font-size: clamp(30px, 5vw, 46px); line-height: 1.15; margin: 0 0 16px; font-weight: 600; }
+  .hero h1 em { font-style: normal; color: var(--yellow); }
+  .hero p { font-size: 17px; color: rgba(227, 242, 253, 0.9); margin: 0 0 14px; }
+  .hero .note { font-size: 15px; color: rgba(227, 242, 253, 0.75); }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px; font-weight: 600; text-decoration: none; font-size: 15px; background: var(--yellow); color: var(--navy); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 24px 0 8px; }
+  .chips a { text-decoration: none; font-size: 14px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); }
+  .chips a:hover { border-color: var(--blue); color: var(--blue); }
+  .region { padding: 36px 0 8px; scroll-margin-top: 72px; }
+  .region h2 { font-size: clamp(24px, 3.4vw, 32px); margin: 0 0 18px; font-weight: 600; }
+  .places { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; }
+  .place { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+  .place img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .place .body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .place h3 { margin: 0; font-size: 18px; font-weight: 600; line-height: 1.3; }
+  .place p { margin: 0; font-size: 15px; }
+  .place .meta { color: var(--muted); font-size: 14px; }
+  .place .credit { margin-top: auto; padding-top: 8px; color: var(--muted); font-size: 12px; }
+  .place .credit a { color: var(--muted); }
+  .tag { align-self: flex-start; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+  .tag-history { color: var(--history); }
+  .tag-autumn { color: var(--autumn); }
+  .cta-box { margin: 48px auto 56px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; display: grid; gap: 12px; }
+  .cta-box h2 { margin: 0; font-size: 24px; font-weight: 600; }
+  .cta-box p { margin: 0; color: var(--muted); }
+  .cta-box .btn { justify-self: start; }
+  footer { padding: 28px 0 44px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+  footer p { margin: 0 0 8px; }
+  footer a { color: var(--blue); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a href="../index.html" aria-label="AppStorm – strona główna"><img src="../assets/img/appstorm-logo-horizontal-light.svg" alt="AppStorm" width="122" height="38"></a>
+    <a class="app" href="index.html">Aplikacja Weekend w regionie</a>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div class="crumbs"><a href="../index.html">AppStorm</a> › <a href="index.html">Weekend w regionie</a> › Jesienne weekendy</div>
+      <h1>Jesienne weekendy: <em>zamki, historia i kolorowe lasy</em> w każdym województwie</h1>
+      <p>Wybraliśmy po kilka miejsc w każdym województwie na jesienny wypad: muzea wojskowe, zamki i Pomniki Historii, a na drugą część dnia – parki, buczyny i rezerwaty w jesiennych kolorach.</p>
+      <p class="note">Jesienią część muzeów i zamków ma krótsze godziny otwarcia – przed wyjazdem sprawdź stronę miejsca.</p>
+      <p><a class="btn" href="https://play.google.com/store/apps/details?id=pl.appstorm.weekendwregionie&amp;utm_source=appstorm.eu&amp;utm_campaign=jesienne-weekendy">Pobierz Weekend w regionie z Google Play</a></p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <nav class="chips" aria-label="Województwa">
+        <a href="#dolnoslaskie">dolnośląskie</a>
+        <a href="#kujawsko-pomorskie">kujawsko-pomorskie</a>
+        <a href="#lubelskie">lubelskie</a>
+        <a href="#lubuskie">lubuskie</a>
+        <a href="#lodzkie">ł&#243;dzkie</a>
+        <a href="#malopolskie">małopolskie</a>
+        <a href="#mazowieckie">mazowieckie</a>
+        <a href="#opolskie">opolskie</a>
+        <a href="#podkarpackie">podkarpackie</a>
+        <a href="#podlaskie">podlaskie</a>
+        <a href="#pomorskie">pomorskie</a>
+        <a href="#slaskie">śląskie</a>
+        <a href="#swietokrzyskie">świętokrzyskie</a>
+        <a href="#warminsko-mazurskie">warmińsko-mazurskie</a>
+        <a href="#wielkopolskie">wielkopolskie</a>
+        <a href="#zachodniopomorskie">zachodniopomorskie</a>
+    </nav>
+  </div>
+
+  <section class="region" id="dolnoslaskie">
+    <div class="wrap">
+      <h2>Dolnośląskie</h2>
+      <div class="places">
+        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-wd-q891409.jpg" alt="Zamek w Bolkowie" width="640" height="365" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamek w Bolkowie</h3>
+            <p class="meta">Bolk&#243;w · ruiny zamku</p>
+            <p>Średniowieczny zamek Piast&#243;w świdnicko-jaworskich na wzg&#243;rzu nad miasteczkiem, z 25-metrową wieżą o charakterystycznym klinowym „dziobie”.</p>
+            <p class="credit">Fot. Jacek Halicki · <a href="https://creativecommons.org/licenses/by/3.0" rel="license noopener">CC BY 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:2018_Zamek_w_Bolkowie_02.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-ph-16179.jpg" alt="Zamek Książ" width="640" height="407" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamek Książ</h3>
+            <p class="meta">Wałbrzych · Pomnik Historii</p>
+            <p>Trzeci co do wielkości zamek w Polsce (po Malborku i Wawelu), w Książańskim Parku Krajobrazowym na Pog&#243;rzu Wałbrzyskim.</p>
+            <p class="credit">Fot. Jar.ciurus · <a href="https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Ksiaz_-_zamek_01.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-ph-8425.jpg" alt="Legnickie Pole" width="640" height="637" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Legnickie Pole</h3>
+            <p class="meta">Legnickie Pole · Pomnik Historii</p>
+            <p>Klasztor benedyktyn&#243;w z XVIII-wiecznym kościołem Kili&#225;na Ign&#225;ca Dientzenhofera; w średniowiecznym kościele św. Tr&#243;jcy i NMP muzeum bitwy pod Legnicą z 1241 roku.</p>
+            <p class="credit">Fot. Kroton · <a href="https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:PL_-_Legnickie_Pole_-_klasztor_-_Kroton_003.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pk-142.jpg" alt="Książański Park Krajobrazowy" width="640" height="360" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Książański Park Krajobrazowy</h3>
+            <p class="meta">Mokrzesz&#243;w · park krajobrazowy</p>
+            <p>Leśne przełomy Pełcznicy i Szczawnika pod zamkiem Książ – dobre miejsce na jesienny spacer po zwiedzaniu zamku.</p>
+            <p class="credit">Fot. Mateusz Matwiejczuk · <a href="https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Widoki_z_Cieszowa_4.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/attraction-wd-q3886274.jpg" alt="Ogr&#243;d Botaniczny we Wrocławiu" width="640" height="480" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Ogr&#243;d Botaniczny we Wrocławiu</h3>
+            <p class="meta">Wrocław · ogr&#243;d botaniczny</p>
+            <p>Drugi najstarszy ogr&#243;d botaniczny w Polsce, założony w 1811 roku na Ostrowie Tumskim, tuż za katedrą.</p>
+            <p class="credit">Fot. Agnieszka Kwiecień, Nova · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Ogr%C3%B3d_Botaniczny_UWr_2023-07-21_01.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>      </div>
+    </div>
+  </section>
+  <section class="region" id="kujawsko-pomorskie">
+    <div class="wrap">
+      <h2>Kujawsko-pomorskie</h2>
+      <div class="places">
+        <article class="place">
+          <img src="../assets/img/11-listopada/museum-muzeum-fortyfikacji-pancernej-twierdzy-torun-torun.jpg" alt="Muzeum Fortyfikacji Pancernej Twierdzy Toruń" width="640" height="480" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Muzeum Fortyfikacji Pancernej Twierdzy Toruń</h3>
+            <p class="meta">Toruń · muzeum</p>
+            <p>Skansen militarny przy baterii z wieżą pancerną z lat 1895–1896, w pierścieniu XIX-wiecznej Twierdzy Toruń.</p>
+            <p class="credit">Fot. Roch Mściw&#243;j · <a href="https://creativecommons.org/publicdomain/mark/1.0/" rel="license noopener">domena publiczna</a> · <a href="https://commons.wikimedia.org/wiki/File:Bateria_eksperymentalna.JPG" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/museum-muzeum-wojsk-ladowych-w-bydgoszczy-bydgoszcz.jpg" alt="Muzeum Wojsk Lądowych w Bydgoszczy" width="640" height="426" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Muzeum Wojsk Lądowych w Bydgoszczy</h3>
+            <p class="meta">Bydgoszcz · muzeum</p>
+            <p>Jedyne w Polsce muzeum wojsk lądowych: wojskowe dzieje Pomorza i Kujaw od powstania wielkopolskiego, broń i ciężki sprzęt.</p>
+            <p class="credit">Fot. Topory · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Kosynierzy_Pomorskie_Muzeum_Wojskowe.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-ph-8408.jpg" alt="Toruń – Stare i Nowe Miasto" width="640" height="385" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Toruń – Stare i Nowe Miasto</h3>
+            <p class="meta">Toruń · Pomnik Historii</p>
+            <p>Gotyckie miasto z listy UNESCO: dom Kopernika, ruiny zamku krzyżackiego i mury od strony Wisły.</p>
+            <p class="credit">Fot. Ren&#233; Klein · <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Torun01CenterWithWall_level_corr.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pk-146.jpg" alt="Brodnicki Park Krajobrazowy" width="640" height="427" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Brodnicki Park Krajobrazowy</h3>
+            <p class="meta">Zarośle · park krajobrazowy</p>
+            <p>Lasy i 58 jezior Pojezierza Brodnickiego w trzech rynnach polodowcowych.</p>
+            <p class="credit">Fot. Marek Cichoń · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Jezioro_Zbiczno_pojezierze_Brodnickie.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-rp-1425.jpg" alt="Dolina Rzeki Brdy" width="640" height="479" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Dolina Rzeki Brdy</h3>
+            <p class="meta">gmina Cekcyn · rezerwat przyrody</p>
+            <p>Głęboka dolina Brdy z meandrami, starorzeczami i stromymi zboczami, w Tucholskim Parku Krajobrazowym – od Woziwody po Piłę-Młyn.</p>
+            <p class="credit">Fot. Malrob · <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Piekie%C5%82ko_Brda_1.JPG" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>      </div>
+    </div>
+  </section>
+  <section class="region" id="lubelskie">
+    <div class="wrap">
+      <h2>Lubelskie</h2>
+      <div class="places">
+        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-ph-8573.jpg" alt="Zamość – miasto i twierdza" width="640" height="446" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamość – miasto i twierdza</h3>
+            <p class="meta">Zamość · Pomnik Historii</p>
+            <p>Renesansowe „miasto idealne” z listy UNESCO; z dawnej twierdzy zachowały się m.in. bastion VII i bramy.</p>
+            <p class="credit">Fot. MaKa · <a href="https://creativecommons.org/licenses/by-sa/2.5" rel="license noopener">CC BY-SA 2.5</a> · <a href="https://commons.wikimedia.org/wiki/File:Kamienice_na_Starym_Mie%C5%9Bcie_w_Zamo%C5%9Bciu_02.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-ph-8409.jpg" alt="Kazimierz Dolny" width="640" height="427" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Kazimierz Dolny</h3>
+            <p class="meta">Kazimierz Dolny · Pomnik Historii</p>
+            <p>Miasteczko nad Wisłą z ruinami zamku, basztą i lessowymi wąwozami – jesienią wyjątkowo malownicze.</p>
+            <p class="credit">Fot. Szymon Staniec · <a href="https://creativecommons.org/licenses/by/4.0" rel="license noopener">CC BY 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Kazimierz_Dolny_2025.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/museum-muzeum-zamoyskich-w-kozlowce-kamionka.jpg" alt="Muzeum Zamoyskich w Kozł&#243;wce" width="640" height="425" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Muzeum Zamoyskich w Kozł&#243;wce</h3>
+            <p class="meta">Kamionka · Pomnik Historii</p>
+            <p>P&#243;źnobarokowy pałac Zamoyskich, jedna z najlepiej zachowanych rezydencji magnackich w Polsce; w dawnej wozowni Galeria Socrealizmu.</p>
+            <p class="credit">Fot. Jacek Karczmarz · <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Kozlowka_palac_front_01.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pn-17.jpg" alt="Roztoczański Park Narodowy" width="640" height="400" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Roztoczański Park Narodowy</h3>
+            <p class="meta">Guci&#243;w · park narodowy</p>
+            <p>Lasy z bukiem i jodłą na Roztoczu; symbolem parku jest konik polski, hodowany m.in. przy stawach Echo.</p>
+            <p class="credit">Fot. Adrianna Rafalska · <a href="https://creativecommons.org/licenses/by/4.0" rel="license noopener">CC BY 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Koniki_polskie_RPN2.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pk-30.jpg" alt="Kazimierski Park Krajobrazowy" width="640" height="480" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Kazimierski Park Krajobrazowy</h3>
+            <p class="meta">Bochotnica · park krajobrazowy</p>
+            <p>Lessowe wąwozy i nadwiślańskie wzg&#243;rza wok&#243;ł Kazimierza Dolnego.</p>
+            <p class="credit">Fot. Krajobrazowy · <a href="https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:9._Nadwi%C5%9Bla%C5%84ska_aleja,_fot._M._Zieli%C5%84ski.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>      </div>
+    </div>
+  </section>
+  <section class="region" id="lubuskie">
+    <div class="wrap">
+      <h2>Lubuskie</h2>
+      <div class="places">
+        <article class="place">
+          <img src="../assets/img/11-listopada/museum-lubuskie-muzeum-wojskowe-w-zielonej-gorze-z-siedziba-w-drzonowie-swidnica.jpg" alt="Lubuskie Muzeum Wojskowe w Drzonowie" width="640" height="480" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Lubuskie Muzeum Wojskowe w Drzonowie</h3>
+            <p class="meta">Świdnica · muzeum</p>
+            <p>Ponad 4 ha parku z czołgami, artylerią, samolotami i śmigłowcami przy pałacu w Drzonowie koło Zielonej G&#243;ry.</p>
+            <p class="credit">Fot. Wisniowy · <a href="https://creativecommons.org/publicdomain/mark/1.0/" rel="license noopener">domena publiczna</a> · <a href="https://commons.wikimedia.org/wiki/File:Muzeum_w_Drzonowie.JPG" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/museum-miedzyrzecki-rejon-umocniony-muzeum-fortyfikacji-i-nietoperzy-w-pniewie-miedzyrzecz.jpg" alt="Międzyrzecki Rejon Umocniony" width="640" height="427" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Międzyrzecki Rejon Umocniony</h3>
+            <p class="meta">Międzyrzecz · muzeum</p>
+            <p>Niemieckie umocnienia z lat 1934–1944 z ponad 30 km podziemnych korytarzy; zimuje w nich ponad 30 tys. nietoperzy, więc przed wizytą sprawdź, kt&#243;re trasy są otwarte.</p>
+            <p class="credit">Fot. Kapitel · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:MRU_Pniewo_01.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-wd-q2029186.jpg" alt="Zamek joannit&#243;w w Słońsku" width="640" height="427" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamek joannit&#243;w w Słońsku</h3>
+            <p class="meta">Słońsk · ruiny zamku</p>
+            <p>Ruiny zamku joannit&#243;w z XV wieku, zniszczonego przez pożar w 1975 roku. W Słońsku działa też ośrodek Parku Narodowego „Ujście Warty”.</p>
+            <p class="credit">Fot. Wojsyl · <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Poland_S%C5%82o%C5%84sk.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-rp-1351.jpg" alt="Buczyna Łagowska" width="640" height="853" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Buczyna Łagowska</h3>
+            <p class="meta">gmina Sulęcin · rezerwat przyrody</p>
+            <p>Rezerwat buczyny pomorskiej w Łagowsko-Sulęcińskim Parku Krajobrazowym – jesienią złoto-rudy las.</p>
+            <p class="credit">Fot. Mariusz · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Buk_nad_jeziorem_%C5%81agowskim.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>      </div>
+    </div>
+  </section>
+  <section class="region" id="lodzkie">
+    <div class="wrap">
+      <h2>Ł&#243;dzkie</h2>
+      <div class="places">
+        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-rp-176.jpg" alt="Niebieskie Źr&#243;dła" width="640" height="480" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Niebieskie Źr&#243;dła</h3>
+            <p class="meta">Tomasz&#243;w Mazowiecki · rezerwat przyrody</p>
+            <p>Krasowe źr&#243;dła o niebiesko-zielonej barwie wody w dolinie Pilicy, w granicach Tomaszowa Mazowieckiego.</p>
+            <p class="credit">Fot. Jolanta Dyr · <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Blue_Sources_Nature_Reserve_in_Tomaszow_Mazowiecki_-_34.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-wd-q9386645.jpg" alt="Zamek w Inowłodzu" width="640" height="457" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamek w Inowłodzu</h3>
+            <p class="meta">Inowł&#243;dz · zamek</p>
+            <p>Gotycki zamek nad Pilicą, ufundowany przez Kazimierza Wielkiego; od 2013 roku otwarty dla turyst&#243;w.</p>
+            <p class="credit">Fot. Billy Cosgrave · <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Inow%C5%82%C3%B3dz_Castle.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-ph-14937.jpg" alt="Ł&#243;dź – miasto przemysłowe" width="640" height="480" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Ł&#243;dź – miasto przemysłowe</h3>
+            <p class="meta">Ł&#243;dź · Pomnik Historii</p>
+            <p>Fabryki i pałace fabrykant&#243;w, m.in. Biała Fabryka Geyera i pałac Poznańskiego – Pomnik Historii „wielokulturowy krajobraz miasta przemysłowego”.</p>
+            <p class="credit">Fot. HuBar · <a href="https://creativecommons.org/licenses/by-sa/2.5" rel="license noopener">CC BY-SA 2.5</a> · <a href="https://commons.wikimedia.org/wiki/File:Ulica_Moniuszki_Lodz.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pk-135.jpg" alt="Bolimowski Park Krajobrazowy" width="640" height="426" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Bolimowski Park Krajobrazowy</h3>
+            <p class="meta">gmina Skierniewice · park krajobrazowy</p>
+            <p>Puszcza Bolimowska z meandrującą Rawką, kt&#243;rej dolina jest rezerwatem przyrody.</p>
+            <p class="credit">Fot. Tomasz Kuran aka Meteor2017 · <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Forest_bpk_cm01.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/attraction-wd-q1794620.jpg" alt="Ł&#243;dzki Ogr&#243;d Botaniczny" width="640" height="400" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Ł&#243;dzki Ogr&#243;d Botaniczny</h3>
+            <p class="meta">Ł&#243;dź · ogr&#243;d botaniczny</p>
+            <p>Ogr&#243;d o powierzchni 67 ha z ogrodem japońskim i arboretum.</p>
+            <p class="credit">Fot. Chrumps · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:%C5%81%C3%B3dzki_Ogr%C3%B3d_Botaniczny.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>      </div>
+    </div>
+  </section>
+  <section class="region" id="malopolskie">
+    <div class="wrap">
+      <h2>Małopolskie</h2>
+      <div class="places">
+        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-wd-q6380677.jpg" alt="Zamek Tenczyn" width="640" height="428" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamek Tenczyn</h3>
+            <p class="meta">Rudno · zamek</p>
+            <p>Ruiny zamku Tęczyńskich na dawnym stożku wulkanicznym w Rudnie koło Krzeszowic, w systemie Orlich Gniazd.</p>
+            <p class="credit">Fot. Jakub Hałun · <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Zamek_Tenczyn_w_Rudnie_20140525_3093.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-wd-q11757772.jpg" alt="Zamek Lipowiec" width="640" height="427" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamek Lipowiec</h3>
+            <p class="meta">Babice · zamek</p>
+            <p>Ruiny zamku biskup&#243;w krakowskich na wapiennym wzg&#243;rzu w Wygiełzowie; obok skansen – Nadwiślański Park Etnograficzny.</p>
+            <p class="credit">Fot. Krzysztof Łopata · <a href="https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Zamek_Lipowiec_8_maja_2010.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-ph-8444.jpg" alt="Krak&#243;w – historyczne centrum" width="640" height="427" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Krak&#243;w – historyczne centrum</h3>
+            <p class="meta">Krak&#243;w · Pomnik Historii</p>
+            <p>Stare Miasto z Wawelem – jedno z pierwszych miejsc wpisanych na listę UNESCO (1978).</p>
+            <p class="credit">Fot. Stanislau 93 · <a href="https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Wawel_on_Wisla.JPG" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pn-1.jpg" alt="Ojcowski Park Narodowy" width="640" height="427" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Ojcowski Park Narodowy</h3>
+            <p class="meta">Ojc&#243;w · park narodowy</p>
+            <p>Najmniejszy park narodowy w Polsce: wapienne skały, jaskinie i zamki w Ojcowie i Pieskowej Skale.</p>
+            <p class="credit">Fot. Aneta Pawska · <a href="https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Dolina_Pr%C4%85dnika,_widok_z_okolic_%C5%BAr._Mi%C5%82o%C5%9Bci.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pk-115.jpg" alt="Bielańsko-Tyniecki Park Krajobrazowy" width="640" height="480" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Bielańsko-Tyniecki Park Krajobrazowy</h3>
+            <p class="meta">Krak&#243;w · park krajobrazowy</p>
+            <p>Lasy i wapienne skałki na zachodnich obrzeżach Krakowa: Lasek Wolski, klasztor kameduł&#243;w na Bielanach i opactwo benedyktyn&#243;w w Tyńcu.</p>
+            <p class="credit">Fot. Opioła Jerzy · <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Ska%C5%82y_Panie%C5%84skie_a2.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>      </div>
+    </div>
+  </section>
+  <section class="region" id="mazowieckie">
+    <div class="wrap">
+      <h2>Mazowieckie</h2>
+      <div class="places">
+        <article class="place">
+          <img src="../assets/img/11-listopada/museum-muzeum-jozefa-pilsudskiego-w-sulejowku-sulejowek.jpg" alt="Muzeum J&#243;zefa Piłsudskiego w Sulej&#243;wku" width="640" height="427" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Muzeum J&#243;zefa Piłsudskiego w Sulej&#243;wku</h3>
+            <p class="meta">Sulej&#243;wek · Pomnik Historii</p>
+            <p>Muzeum przy dworku „Milusin”, dawnym domu Marszałka – miejsce jak stworzone na 11 listopada.</p>
+            <p class="credit">Fot. AgataGro · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Nowy_budynek_Muzeum.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/museum-muzeum-ziemi-sochaczewskiej-w-pola-bitwy-nad-bzura-w-sochaczewie-sochaczew.jpg" alt="Muzeum Pola Bitwy nad Bzurą" width="640" height="356" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Muzeum Pola Bitwy nad Bzurą</h3>
+            <p class="meta">Sochaczew · muzeum</p>
+            <p>Muzeum w klasycystycznym ratuszu w Sochaczewie, poświęcone m.in. bitwie nad Bzurą – największej bitwie kampanii wrześniowej 1939 roku.</p>
+            <p class="credit">Fot. Przykuta ( talk ) · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Sochaczew_muzeum_01.05.09_p.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-wd-q9386588.jpg" alt="Zamek w Czersku" width="640" height="207" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamek w Czersku</h3>
+            <p class="meta">Czersk · zamek</p>
+            <p>Gotycki zamek książąt mazowieckich z lat 1388–1410 koło G&#243;ry Kalwarii, na miejscu dawnego grodu.</p>
+            <p class="credit">Fot. Original uploader was Semu at pl.wikipedia · <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Zamek_ksi%C4%85%C5%BC%C4%85t_mazowieckich_w_Czersku_2.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pn-9.jpg" alt="Kampinoski Park Narodowy" width="640" height="511" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Kampinoski Park Narodowy</h3>
+            <p class="meta">Stara Dąbrowa · park narodowy</p>
+            <p>Wydmy, lasy i bagna Puszczy Kampinoskiej tuż za Warszawą – rezerwat biosfery UNESCO.</p>
+            <p class="credit">Fot. Wojsyl · <a href="https://creativecommons.org/licenses/by-sa/2.5" rel="license noopener">CC BY-SA 2.5</a> · <a href="https://commons.wikimedia.org/wiki/File:Poland_Kampinos_Alces_alces_1.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/attraction-wd-q18432909.jpg" alt="Ogr&#243;d Botaniczny Uniwersytetu Warszawskiego" width="640" height="853" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Ogr&#243;d Botaniczny Uniwersytetu Warszawskiego</h3>
+            <p class="meta">Warszawa · ogr&#243;d botaniczny</p>
+            <p>Trzeci najstarszy ogr&#243;d botaniczny w Polsce, w Alejach Ujazdowskich, tuż przy Łazienkach Kr&#243;lewskich.</p>
+            <p class="credit">Fot. Barcex · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Warsaw_University_Astronomical_Observatory.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>      </div>
+    </div>
+  </section>
+  <section class="region" id="opolskie">
+    <div class="wrap">
+      <h2>Opolskie</h2>
+      <div class="places">
+        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-ph-8407.jpg" alt="G&#243;ra Świętej Anny" width="640" height="960" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>G&#243;ra Świętej Anny</h3>
+            <p class="meta">G&#243;ra Świętej Anny · Pomnik Historii</p>
+            <p>Sanktuarium św. Anny, amfiteatr i pomnik dłuta Xawerego Dunikowskiego – miejsce walk III powstania śląskiego w 1921 roku.</p>
+            <p class="credit">Fot. Xxkazik · <a href="https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:G%C3%B3ra_%C5%9Bw._Anny,_ko%C5%9Bci%C3%B3%C5%82_klasztorny_franciszkan%C3%B3w,_xxkazik.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/museum-muzeum-piastow-slaskich-w-brzegu-brzeg.jpg" alt="Muzeum Piast&#243;w Śląskich w Brzegu" width="640" height="255" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Muzeum Piast&#243;w Śląskich w Brzegu</h3>
+            <p class="meta">Brzeg · Pomnik Historii</p>
+            <p>Renesansowy zamek z arkadowym dziedzińcem, nazywany „śląskim Wawelem”.</p>
+            <p class="credit">Fot. Scotch Mist · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Brzeg_Castle_01.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-wd-q6333019.jpg" alt="Zamek w Otmuchowie" width="640" height="461" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamek w Otmuchowie</h3>
+            <p class="meta">Otmuch&#243;w · zamek</p>
+            <p>Zamek biskup&#243;w wrocławskich na granitowym wzniesieniu, g&#243;rujący nad miasteczkiem.</p>
+            <p class="credit">Fot. Jacek Halicki · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:2026_Zamek_w_Otmuchowie_(11).jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-wd-q1133188.jpg" alt="Pałac w Mosznej" width="640" height="427" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Pałac w Mosznej</h3>
+            <p class="meta">Moszna · pałac</p>
+            <p>Bajkowy pałac z 99 wieżami i wieżyczkami, otoczony parkiem – jesienią bardzo fotogeniczny.</p>
+            <p class="credit">Fot. Christinagrabelusshaikh · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Zamek_w_Mosznej_2024.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pk-11.jpg" alt="Park Krajobrazowy G&#243;ry Opawskie" width="640" height="359" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Park Krajobrazowy G&#243;ry Opawskie</h3>
+            <p class="meta">Jarnołt&#243;wek · park krajobrazowy</p>
+            <p>Biskupia Kopa z wieżą widokową i leśne szlaki wok&#243;ł Jarnołt&#243;wka.</p>
+            <p class="credit">Fot. Tymczyszynka · <a href="https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:13wrybgety.JPG" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>      </div>
+    </div>
+  </section>
+  <section class="region" id="podkarpackie">
+    <div class="wrap">
+      <h2>Podkarpackie</h2>
+      <div class="places">
+        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-wd-q1014005.jpg" alt="Zamek Sobień" width="640" height="853" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamek Sobień</h3>
+            <p class="meta">Manasterzec · zamek</p>
+            <p>Ruiny średniowiecznego zamku na G&#243;rze Sobień nad Sanem, w Manasterzcu w powiecie leskim.</p>
+            <p class="credit">Fot. Spars at Polish Wikipedia · <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:SobienKmitha.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-ph-15445.jpg" alt="Zamek w Krasiczynie" width="640" height="433" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamek w Krasiczynie</h3>
+            <p class="meta">Krasiczyn · Pomnik Historii</p>
+            <p>Renesansowo-manierystyczny zamek z czterema r&#243;żnymi basztami – Boską, Papieską, Kr&#243;lewską i Szlachecką – otoczony parkiem.</p>
+            <p class="credit">Fot. Andrzej Gondek · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Zamek_w_Krasiczynie.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/museum-muzeum-zamek-w-lancucie-lancut.jpg" alt="Zamek w Łańcucie" width="640" height="302" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamek w Łańcucie</h3>
+            <p class="meta">Łańcut · Pomnik Historii</p>
+            <p>Rezydencja Lubomirskich i Potockich, wyr&#243;żniająca się bogactwem zbior&#243;w i zachowanym założeniem parkowym.</p>
+            <p class="credit">Fot. Mach240390 · <a href="https://creativecommons.org/licenses/by/4.0" rel="license noopener">CC BY 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Zamek-WidokOdFrontu-POL,_%C5%81a%C5%84cut.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pn-7.jpg" alt="Bieszczadzki Park Narodowy" width="640" height="369" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Bieszczadzki Park Narodowy</h3>
+            <p class="meta">Ustrzyki G&#243;rne · park narodowy</p>
+            <p>Połoniny i buczyny Bieszczad&#243;w; część pradawnych las&#243;w bukowych parku jest na liście UNESCO.</p>
+            <p class="credit">Fot. Pudelek · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Bieszczady,_Po%C5%82onina_Cary%C5%84ska_in_the_evening_01.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pk-57.jpg" alt="Czarnorzecko-Strzyżowski Park Krajobrazowy" width="640" height="480" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Czarnorzecko-Strzyżowski Park Krajobrazowy</h3>
+            <p class="meta">Wysoka Strzyżowska · park krajobrazowy</p>
+            <p>Piaskowcowe ostańce, m.in. w rezerwacie Prządki, na Pog&#243;rzu Strzyżowskim i Dynowskim.</p>
+            <p class="credit">Fot. Stanislaw Szydlo · <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Prz%C4%85dki_Czarnorzeki_2c.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>      </div>
+    </div>
+  </section>
+  <section class="region" id="podlaskie">
+    <div class="wrap">
+      <h2>Podlaskie</h2>
+      <div class="places">
+        <article class="place">
+          <img src="../assets/img/11-listopada/museum-muzeum-wojska-w-bialymstoku-bialystok.jpg" alt="Muzeum Wojska w Białymstoku" width="640" height="360" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Muzeum Wojska w Białymstoku</h3>
+            <p class="meta">Białystok · muzeum</p>
+            <p>Historia wojskowości r&#243;żnych epok, dioramy i park militarny.</p>
+            <p class="credit">Fot. Rakoon · <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license noopener">CC0</a> · <a href="https://commons.wikimedia.org/wiki/File:20200802_091744_Muzeum_Wojska_w_Bia%C5%82ymstoku.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-wd-q5734420.jpg" alt="Zamek w Tykocinie" width="640" height="427" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamek w Tykocinie</h3>
+            <p class="meta">Tykocin · zamek</p>
+            <p>Zamek z czas&#243;w Zygmunta Augusta nad Narwią, odbudowany w XXI wieku; dziś muzeum z wieżą widokową.</p>
+            <p class="credit">Fot. Krzysztof Popławski · <a href="https://creativecommons.org/licenses/by/4.0" rel="license noopener">CC BY 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Tykocin,_Zesp%C3%B3%C5%82_zamku,_przed_1469,_KsP.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-rp-813.jpg" alt="Głazowisko Łopuchowskie" width="640" height="428" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Głazowisko Łopuchowskie</h3>
+            <p class="meta">Łopuchowo · rezerwat przyrody</p>
+            <p>Las, łąki i pastwiska pełne głaz&#243;w narzutowych, w Suwalskim Parku Krajobrazowym.</p>
+            <p class="credit">Fot. Fotoeksplorer · <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:LOPUCHOWO_1.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pn-10.jpg" alt="Narwiański Park Narodowy" width="640" height="480" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Narwiański Park Narodowy</h3>
+            <p class="meta">Baciuty · park narodowy</p>
+            <p>Bagienna dolina Narwi z ponadkilometrową kładką Śliwno–Waniewo, częściowo na pływających platformach.</p>
+            <p class="credit">Fot. Adam-dalekie-pole · <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Waniewo_-_rzeka_Narew.JPG" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pk-76.jpg" alt="Suwalski Park Krajobrazowy" width="640" height="438" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Suwalski Park Krajobrazowy</h3>
+            <p class="meta">Łopuchowo · park krajobrazowy</p>
+            <p>Najstarszy park krajobrazowy w Polsce: polodowcowe wzg&#243;rza i Hańcza, najgłębsze jezioro w kraju (108,5 m).</p>
+            <p class="credit">Fot. Fotoeksplorer · <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Suwalski_Park_Krajobrazowy.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>      </div>
+    </div>
+  </section>
+  <section class="region" id="pomorskie">
+    <div class="wrap">
+      <h2>Pomorskie</h2>
+      <div class="places">
+        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-ph-8812.jpg" alt="Westerplatte" width="640" height="480" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Westerplatte</h3>
+            <p class="meta">Gdańsk · Pomnik Historii</p>
+            <p>Symboliczne miejsce początku II wojny światowej, 1 września 1939 – zachowane wartownie i 25-metrowy Pomnik Obrońc&#243;w Wybrzeża.</p>
+            <p class="credit">Fot. Adam Jones from Kelowna, BC, Canada · <a href="https://creativecommons.org/licenses/by-sa/2.0" rel="license noopener">CC BY-SA 2.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Memorial_to_Defenders_-_Westerplatte_-_Gdansk_-_Poland_-_01_(27474123574).jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/museum-muzeum-zamkowe-w-malborku-malbork.jpg" alt="Zamek w Malborku" width="640" height="419" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamek w Malborku</h3>
+            <p class="meta">Malbork · Pomnik Historii</p>
+            <p>Gotycki zamek krzyżacki, największy na świecie pod względem powierzchni; od 1309 roku stolica państwa zakonnego, z listy UNESCO.</p>
+            <p class="credit">Fot. DerHexer ; derivate work: Carschten · <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Panorama_of_Malbork_Castle,_part_4.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-wd-q5574254.jpg" alt="Zamek w Gniewie" width="640" height="480" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamek w Gniewie</h3>
+            <p class="meta">Gniew · zamek</p>
+            <p>Krzyżacki zamek nad Wisłą z przełomu XIII i XIV wieku, znany z turniej&#243;w rycerskich i inscenizacji historycznych.</p>
+            <p class="credit">Fot. Monika Towiańska · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Zamek_w_Gniewie_1.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pn-3.jpg" alt="Park Narodowy Bory Tucholskie" width="640" height="470" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Park Narodowy Bory Tucholskie</h3>
+            <p class="meta">gmina Chojnice · park narodowy</p>
+            <p>Bory i 21 jezior, w tym ciąg Strugi Siedmiu Jezior.</p>
+            <p class="credit">Fot. Przykuta · <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Witacz_w_Parku_Narodowym_Bory_Tucholskie_03.07.10_p.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pk-34.jpg" alt="Park Krajobrazowy Dolina Słupi" width="640" height="426" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Park Krajobrazowy Dolina Słupi</h3>
+            <p class="meta">gmina Kołczygłowy · park krajobrazowy</p>
+            <p>Dolina Słupi wśr&#243;d las&#243;w, z elektrowniami wodnymi Systemu Energetycznego Słupi.</p>
+            <p class="credit">Fot. Michał Przybylski · <a href="https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Dolina_S%C5%82upi_obszar_PLH220052_Dolina_S%C5%82upi.JPG" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>      </div>
+    </div>
+  </section>
+  <section class="region" id="slaskie">
+    <div class="wrap">
+      <h2>Śląskie</h2>
+      <div class="places">
+        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-ph-15183.jpg" alt="Radiostacja Gliwice" width="640" height="640" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Radiostacja Gliwice</h3>
+            <p class="meta">Gliwice · Pomnik Historii</p>
+            <p>111-metrowa wieża – najwyższa istniejąca drewniana konstrukcja w Europie; tu 31 sierpnia 1939 roku Niemcy przeprowadzili prowokację gliwicką.</p>
+            <p class="credit">Fot. Tomasz G&#243;rny (Nemo5576) · <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Gliwice_Radiostacja_DSC_9386.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-ph-9517.jpg" alt="Gmach Sejmu Śląskiego w Katowicach" width="640" height="237" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Gmach Sejmu Śląskiego w Katowicach</h3>
+            <p class="meta">Katowice · Pomnik Historii</p>
+            <p>Gmach z lat 1924–1929, symbol autonomii wojew&#243;dztwa śląskiego po przyłączeniu części G&#243;rnego Śląska do Polski.</p>
+            <p class="credit">Fot. Lestat (Jan Mehlich) · <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Katowice_-_Gmach_Sejmu_%C5%9Al%C4%85skiego_01.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-wd-q3493915.jpg" alt="Zamek w Mirowie" width="640" height="785" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamek w Mirowie</h3>
+            <p class="meta">gmina Niegowa · ruiny zamku</p>
+            <p>Ruiny zamku na Szlaku Orlich Gniazd, niedaleko zamku w Bobolicach.</p>
+            <p class="credit">Fot. Przykuta · <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Mir%C3%B3w_zamek_29.05.2010_p4.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pk-18.jpg" alt="Park Krajobrazowy Beskidu Śląskiego" width="640" height="427" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Park Krajobrazowy Beskidu Śląskiego</h3>
+            <p class="meta">Szczyrk · park krajobrazowy</p>
+            <p>Pasma Baraniej G&#243;ry i Czantorii, a w nich źr&#243;dła Białej i Czarnej Wisełki, kt&#243;re dają początek Wiśle.</p>
+            <p class="credit">Fot. Pimke · <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Szlak_zielony_na_B%C5%82atni%C4%8514.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pk-54.jpg" alt="Cysterskie Kompozycje Krajobrazowe Rud Wielkich" width="640" height="480" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Cysterskie Kompozycje Krajobrazowe Rud Wielkich</h3>
+            <p class="meta">G&#243;rki Śląskie · park krajobrazowy</p>
+            <p>Lasy i stawy wok&#243;ł pocysterskiego opactwa w Rudach.</p>
+            <p class="credit">Fot. Mariuszjbie · <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Park_krajobrazowy,_cysterskie_kompozycje_krajobrazowe.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>      </div>
+    </div>
+  </section>
+  <section class="region" id="swietokrzyskie">
+    <div class="wrap">
+      <h2>Świętokrzyskie</h2>
+      <div class="places">
+        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-ph-15465.jpg" alt="Krzyżtop&#243;r" width="640" height="337" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Krzyżtop&#243;r</h3>
+            <p class="meta">Ujazd · Pomnik Historii</p>
+            <p>Ruiny pałacu obronnego Krzysztofa Ossolińskiego z lat 1621–1644 – przed powstaniem Wersalu jednej z największych budowli pałacowych w Europie.</p>
+            <p class="credit">Fot. Marcin Białek · <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Krzy%C5%BCtop%C3%B3r_2013.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-rp-860.jpg" alt="Skałki Piekło pod Niekłaniem" width="600" height="800" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Skałki Piekło pod Niekłaniem</h3>
+            <p class="meta">Niekłań Wielki · rezerwat przyrody</p>
+            <p>Skałki o osobliwych kształtach wyrzeźbionych przez wiatr, ciągnące się przez około kilometr w lasach koło Niekłania.</p>
+            <p class="credit">Fot. Scythian~commonswiki · <a href="https://creativecommons.org/licenses/by/2.5" rel="license noopener">CC BY 2.5</a> · <a href="https://commons.wikimedia.org/wiki/File:Rezerwat_piek%C5%82o_ko%C5%82o_niek%C5%82ania.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-wd-q9386751.jpg" alt="Zamek w Szydłowie" width="640" height="480" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamek w Szydłowie</h3>
+            <p class="meta">Szydł&#243;w · zamek</p>
+            <p>Ruiny zamku Kazimierza Wielkiego i zachowane na 700 m średniowieczne mury miejskie z Bramą Krakowską.</p>
+            <p class="credit">Fot. Jakub Hałun · <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Szydlow_castle_20060619_1433.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pn-6.jpg" alt="Świętokrzyski Park Narodowy" width="640" height="425" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Świętokrzyski Park Narodowy</h3>
+            <p class="meta">Podg&#243;rze · park narodowy</p>
+            <p>Łysica i Łysa G&#243;ra z dawnym klasztorem benedyktyn&#243;w oraz gołoborza w paśmie Łysog&#243;r.</p>
+            <p class="credit">Fot. Jakub Hałun · <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Lysa_Gora_goloborze_3914_20080703.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>      </div>
+    </div>
+  </section>
+  <section class="region" id="warminsko-mazurskie">
+    <div class="wrap">
+      <h2>Warmińsko-mazurskie</h2>
+      <div class="places">
+        <article class="place">
+          <img src="../assets/img/11-listopada/museum-muzeum-bitwy-pod-grunwaldem-w-stebarku-gietrzwald.jpg" alt="Pola Grunwaldu" width="640" height="425" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Pola Grunwaldu</h3>
+            <p class="meta">Gietrzwałd · Pomnik Historii</p>
+            <p>Pole bitwy z 1410 roku – Pomnik Historii – z muzeum i zespołem pomnikowym.</p>
+            <p class="credit">Fot. Felouch Kotek · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Mus%C3%A9e_de_Grunwald.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-ph-15449.jpg" alt="Zamek w Lidzbarku Warmińskim" width="640" height="427" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamek w Lidzbarku Warmińskim</h3>
+            <p class="meta">Lidzbark Warmiński · Pomnik Historii</p>
+            <p>Gotycki zamek biskup&#243;w warmińskich z XIV wieku, jeden z najlepiej zachowanych w Polsce; przebywał tu Mikołaj Kopernik.</p>
+            <p class="credit">Fot. Dawid Galus · <a href="https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:646547_Lidzbark_Warmi%C5%84ski_zamek_krzy%C5%BCacki_03.JPG" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-wd-q1095347.jpg" alt="Zamek w Rynie" width="640" height="429" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamek w Rynie</h3>
+            <p class="meta">Ryn · zamek</p>
+            <p>Krzyżacki zamek z XIV wieku na wzniesieniu między Jeziorem Ryńskim a Ołowem; dziś działa w nim hotel.</p>
+            <p class="credit">Fot. Semu · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:RynCastle1.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-rp-1356.jpg" alt="Buki Wysoczyzny Elbląskiej" width="640" height="480" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Buki Wysoczyzny Elbląskiej</h3>
+            <p class="meta">Kadyny · rezerwat przyrody</p>
+            <p>Buczyna pomorska w Parku Krajobrazowym Wysoczyzny Elbląskiej – jesienią złota.</p>
+            <p class="credit">Fot. Sylwester Jarkiewicz · <a href="https://creativecommons.org/licenses/by/3.0" rel="license noopener">CC BY 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Rezerwat_Buki_Wysoczyzny_Elbl%C4%85skiej_-_panoramio.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pk-29.jpg" alt="Mazurski Park Krajobrazowy" width="640" height="353" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Mazurski Park Krajobrazowy</h3>
+            <p class="meta">gmina Ruciane-Nida · park krajobrazowy</p>
+            <p>Jeden z największych park&#243;w krajobrazowych w Polsce: Puszcza Piska z Krutynią i Śniardwy, największe jezioro w kraju.</p>
+            <p class="credit">Fot. Morgen56 · <a href="https://creativecommons.org/licenses/by/3.0" rel="license noopener">CC BY 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Majcz3.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>      </div>
+    </div>
+  </section>
+  <section class="region" id="wielkopolskie">
+    <div class="wrap">
+      <h2>Wielkopolskie</h2>
+      <div class="places">
+        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-ph-8414.jpg" alt="Zamek w K&#243;rniku" width="640" height="401" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Zamek w K&#243;rniku</h3>
+            <p class="meta">K&#243;rnik · Pomnik Historii</p>
+            <p>Neogotycki zamek Działyńskich nad Jeziorem K&#243;rnickim, z Biblioteką K&#243;rnicką i arboretum.</p>
+            <p class="credit">Fot. Diego Delso · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Castillo_de_K%C3%B3rnik,_K%C3%B3rnik,_Polonia,_2016-12-21,_DD_04.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/museum-muzeum-pierwszych-piastow-na-lednicy-lednogora.jpg" alt="Muzeum Pierwszych Piast&#243;w na Lednicy" width="640" height="424" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Muzeum Pierwszych Piast&#243;w na Lednicy</h3>
+            <p class="meta">Lednog&#243;ra · Pomnik Historii</p>
+            <p>Ostr&#243;w Lednicki – gr&#243;d pierwszych Piast&#243;w z reliktami palatium i kościoła; obok skansen w Dziekanowicach.</p>
+            <p class="credit">Fot. Ewa Oderkiewicz · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Siedziba_Mieszka_I_-_Muzeum_Pierwszych_Piast%C3%B3w.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-rp-1368.jpg" alt="Buki nad Jeziorem Lutomskim" width="640" height="427" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Buki nad Jeziorem Lutomskim</h3>
+            <p class="meta">gmina Sierak&#243;w · rezerwat przyrody</p>
+            <p>Buczyna na stromych zboczach nad Jeziorem Lutomskim koło Sierakowa.</p>
+            <p class="credit">Fot. Olympic1981 · <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Buki_nad_lutomskim_1.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pn-20.jpg" alt="Wielkopolski Park Narodowy" width="640" height="480" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Wielkopolski Park Narodowy</h3>
+            <p class="meta">Trzebaw · park narodowy</p>
+            <p>Lasy i polodowcowe jeziora tuż pod Poznaniem.</p>
+            <p class="credit">Fot. MOs810 · <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Wielkopolski_National_Park_okolica_Trzecielinskiego_Bagna)_(1).jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>      </div>
+    </div>
+  </section>
+  <section class="region" id="zachodniopomorskie">
+    <div class="wrap">
+      <h2>Zachodniopomorskie</h2>
+      <div class="places">
+        <article class="place">
+          <img src="../assets/img/11-listopada/museum-muzeum-oreza-polskiego-w-kolobrzegu-kolobrzeg.jpg" alt="Muzeum Oręża Polskiego w Kołobrzegu" width="640" height="427" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Muzeum Oręża Polskiego w Kołobrzegu</h3>
+            <p class="meta">Kołobrzeg · muzeum</p>
+            <p>Dzieje oręża polskiego i plenerowa wystawa pojazd&#243;w, samolot&#243;w i artylerii, z jeżdżącym czołgiem T-34-85.</p>
+            <p class="credit">Fot. Kapitel · <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license noopener">CC0</a> · <a href="https://commons.wikimedia.org/wiki/File:Kolobrzeg_muzeum_oreza_budynek.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/museum-muzeum-historii-twierdzy-swinoujscie-swinoujscie.jpg" alt="Muzeum Historii Twierdzy Świnoujście" width="640" height="359" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Muzeum Historii Twierdzy Świnoujście</h3>
+            <p class="meta">Świnoujście · muzeum</p>
+            <p>Dzieje Twierdzy Morskiej Świnoujście od czas&#243;w pruskich po zimną wojnę, w sali i pod gołym niebem.</p>
+            <p class="credit">Fot. sebdok · <a href="https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en" rel="license noopener">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Fort_IV_-_Zachodni_Fort_Artleryjski_(wyspa_Uznam_i_lewy_brzeg_%C5%9Awiny)_660735_(4).JPG" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/heritage-ph-8677.jpg" alt="Stargard – mury obronne" width="640" height="960" loading="lazy">
+          <div class="body">
+            <span class="tag tag-history">Historia</span>
+            <h3>Stargard – mury obronne</h3>
+            <p class="meta">Stargard · Pomnik Historii</p>
+            <p>Ponad kilometr średniowiecznych mur&#243;w z basztami i bramami – razem z kościołem Mariackim Pomnik Historii.</p>
+            <p class="credit">Fot. Piotr Rynio · <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license noopener">CC0</a> · <a href="https://commons.wikimedia.org/wiki/File:Stargard_Szczeci%C5%84ski,_kolegiata.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pn-4.jpg" alt="Woliński Park Narodowy" width="640" height="427" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Woliński Park Narodowy</h3>
+            <p class="meta">gmina Międzyzdroje · park narodowy</p>
+            <p>Klify nad Bałtykiem do 95 m wysokości, Jezioro Turkusowe i Zagroda Pokazowa Żubr&#243;w.</p>
+            <p class="credit">Fot. Shoovareck · <a href="https://creativecommons.org/licenses/by/3.0" rel="license noopener">CC BY 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:WPN2.jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>        <article class="place">
+          <img src="../assets/img/11-listopada/nature-pl-zipop-1393-pk-81.jpg" alt="Drawski Park Krajobrazowy" width="640" height="400" loading="lazy">
+          <div class="body">
+            <span class="tag tag-autumn">Jesienny spacer</span>
+            <h3>Drawski Park Krajobrazowy</h3>
+            <p class="meta">gmina Czaplinek · park krajobrazowy</p>
+            <p>Pojezierze Drawskie z Doliną Pięciu Jezior.</p>
+            <p class="credit">Fot. Krok Za Horyzont Blog from Polska · <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license noopener">CC0</a> · <a href="https://commons.wikimedia.org/wiki/File:Drawski_Park_Krajobrazowy_(43476410992).jpg" rel="noopener">Wikimedia Commons</a></p>
+          </div>
+        </article>      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="cta-box">
+      <h2>Więcej takich miejsc w okolicy</h2>
+      <p>Weekend w regionie to bezpłatna aplikacja na Androida z ponad 7000 miejsc z otwartych danych publicznych: muzea, zamki, parki, rezerwaty, leśne ścieżki i miejsca, gdzie legalnie przenocujesz w lesie. Działa bez internetu, bez konta i bez reklam.</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=pl.appstorm.weekendwregionie&amp;utm_source=appstorm.eu&amp;utm_campaign=jesienne-weekendy">Pobierz z Google Play</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Listę przygotował zespół AppStorm, autorzy aplikacji Weekend w regionie. Dane o miejscach: Narodowy Instytut Dziedzictwa – Pomniki Historii (CC BY 4.0), Ministerstwo Kultury i Dziedzictwa Narodowego – wykaz muzeów (CC0), Generalna Dyrekcja Ochrony Środowiska – formy ochrony przyrody (CC0), Wikidata (CC0). Zdjęcia: Wikimedia Commons, autor i licencja przy każdym zdjęciu.</p>
+    <p>© 2026 AppStorm Tomasz Jagielski · <a href="index.html">Weekend w regionie</a> · <a href="polityka-prywatnosci.html">Polityka prywatności</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
