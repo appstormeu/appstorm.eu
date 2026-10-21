@@ -126,6 +126,11 @@
   .stats { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 0 0 20px; }
   .stats div b { display: block; font-size: 22px; font-weight: 600; color: var(--accent-ink); line-height: 1.2; }
   .stats div span { color: var(--muted); font-size: 13px; }
+  .play-badge { display: block; width: max-content; line-height: 0; margin: 12px 0 14px; }
+  .play-badge img { height: 48px; width: auto; }
+  .season-pill { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 18px; padding: 7px 14px 7px 7px; border-radius: 999px; background: rgba(255, 213, 79, 0.18); border: 1px solid rgba(214, 160, 0, 0.45); color: var(--ink); font-weight: 600; font-size: 14px; text-decoration: none; }
+  .season-pill b { background: #FFD54F; color: #0F1630; border-radius: 999px; padding: 2px 9px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .season-pill:hover { background: rgba(255, 213, 79, 0.3); }
   .links { display: flex; flex-wrap: wrap; gap: 16px; font-size: 14px; }
   .links a { color: var(--blue); text-decoration: none; font-weight: 600; }
   .links a:hover { text-decoration: underline; }
@@ -165,6 +170,7 @@
 
   footer { padding: 36px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
   footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  footer .tm { flex-basis: 100%; font-size: 12px; }
 </style>
 </head>
 <body>
@@ -252,7 +258,8 @@
               <span>Android · bezpłatna</span>
             </div>
           </div>
-          <div class="status">● Dostępna w Google Play</div>
+          <a class="play-badge" href="https://play.google.com/store/apps/details?id=pl.appstorm.weekendwregionie&amp;utm_source=appstorm.eu&amp;utm_campaign=strona-glowna"><img src="assets/img/google-play-badge-pl.svg" alt="Pobierz z Google Play" width="162" height="48"></a>
+          <a class="season-pill" href="weekend-w-regionie/11-listopada.html"><b>Nowość</b> Na 11 listopada: 77 miejsc w każdym województwie →</a>
           <p>Pomysły na weekend w okolicy: muzea, zamki, parki narodowe, rezerwaty, leśne ścieżki i kąpieliska, posortowane według odległości. Działa bez zasięgu, bez konta i bez reklam.</p>
           <div class="stats" aria-label="Co jest w aplikacji">
             <div><b>7 300+</b><span>miejsc</span></div>
@@ -268,9 +275,7 @@
             <li>Smaki regionu – produkty tradycyjne z każdego województwa</li>
           </ul>
           <div class="links">
-            <a href="https://play.google.com/store/apps/details?id=pl.appstorm.weekendwregionie&amp;utm_source=appstorm.eu&amp;utm_campaign=strona-glowna">Pobierz z Google Play</a>
             <a href="weekend-w-regionie/index.html">Strona aplikacji</a>
-            <a href="weekend-w-regionie/11-listopada.html">Na 11 listopada</a>
             <a href="weekend-w-regionie/polityka-prywatnosci.html">Polityka prywatności</a>
             <a href="mailto:kontakt@appstorm.eu?subject=Weekend%20w%20regionie">Zgłoś uwagę</a>
           </div>
@@ -361,6 +366,7 @@
   <div class="wrap">
     <span>© 2026 AppStorm Tomasz Jagielski · <a href="en.html" lang="en" hreflang="en">English version</a></span>
     <span>Ta strona nie używa ciasteczek ani narzędzi analitycznych.</span>
+    <span class="tm">Google Play i logo Google Play są znakami towarowymi Google LLC.</span>
   </div>
 </footer>
 
