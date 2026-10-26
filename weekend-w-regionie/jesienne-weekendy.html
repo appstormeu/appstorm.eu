@@ -60,6 +60,8 @@
   .region { padding: 36px 0 8px; scroll-margin-top: 72px; }
   .region h2 { font-size: clamp(24px, 3.4vw, 32px); margin: 0 0 18px; font-weight: 600; }
   .places { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; }
+  /* Sześć miejsc: najwyżej trzy kolumny (2 × 3), żeby szósta karta nie została sama w rzędzie. */
+  .places.six { grid-template-columns: repeat(auto-fit, minmax(max(200px, calc((100% - 36px) / 3)), 1fr)); }
   .place { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
   .place img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
   .place .body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
@@ -124,7 +126,7 @@
   <section class="region" id="dolnoslaskie">
     <div class="wrap">
       <h2>Dolnośląskie</h2>
-      <div class="places">
+      <div class="places six">
         <article class="place">
           <img src="../assets/img/11-listopada/heritage-wd-q891409.jpg" alt="Zamek w Bolkowie" width="640" height="365" loading="lazy">
           <div class="body">
@@ -237,7 +239,7 @@
   <section class="region" id="lubelskie">
     <div class="wrap">
       <h2>Lubelskie</h2>
-      <div class="places">
+      <div class="places six">
         <article class="place">
           <img src="../assets/img/11-listopada/heritage-ph-8573.jpg" alt="Zamość – miasto i twierdza" width="640" height="446" loading="lazy">
           <div class="body">
@@ -341,7 +343,7 @@
   <section class="region" id="lodzkie">
     <div class="wrap">
       <h2>Ł&#243;dzkie</h2>
-      <div class="places">
+      <div class="places six">
         <article class="place">
           <img src="../assets/img/11-listopada/nature-pl-zipop-1393-rp-176.jpg" alt="Niebieskie Źr&#243;dła" width="640" height="480" loading="lazy">
           <div class="body">
@@ -402,7 +404,7 @@
   <section class="region" id="malopolskie">
     <div class="wrap">
       <h2>Małopolskie</h2>
-      <div class="places">
+      <div class="places six">
         <article class="place">
           <img src="../assets/img/11-listopada/heritage-wd-q6380677.jpg" alt="Zamek Tenczyn" width="640" height="428" loading="lazy">
           <div class="body">
@@ -567,7 +569,7 @@
   <section class="region" id="podkarpackie">
     <div class="wrap">
       <h2>Podkarpackie</h2>
-      <div class="places">
+      <div class="places six">
         <article class="place">
           <img src="../assets/img/11-listopada/heritage-wd-q1014005.jpg" alt="Zamek Sobień" width="640" height="853" loading="lazy">
           <div class="body">
@@ -732,7 +734,7 @@
   <section class="region" id="slaskie">
     <div class="wrap">
       <h2>Śląskie</h2>
-      <div class="places">
+      <div class="places six">
         <article class="place">
           <img src="../assets/img/11-listopada/heritage-ph-15183.jpg" alt="Radiostacja Gliwice" width="640" height="640" loading="lazy">
           <div class="body">
