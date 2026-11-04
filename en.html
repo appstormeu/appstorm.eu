@@ -135,6 +135,26 @@
   .links { display: flex; flex-wrap: wrap; gap: 16px; font-size: 14px; }
   .links a { color: var(--blue); text-decoration: none; font-weight: 600; }
   .links a:hover { text-decoration: underline; }
+  .project + .project { margin-top: 24px; }
+  .app-icon-uniszop { background: none; }
+
+  /* UniSzop: przykładowy plan zakupów */
+  .plan { margin: 0; justify-self: center; width: 100%; max-width: 380px; padding: 20px; border-radius: 22px; background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); }
+  .plan-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+  .plan-head span { color: var(--muted); font-size: 14px; }
+  .plan-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+  .plan-tabs span { font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+  .plan-tabs .on { background: var(--yellow); border-color: var(--yellow); color: var(--navy); }
+  .shop { border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; margin-bottom: 10px; }
+  .shop-top { display: flex; justify-content: space-between; gap: 8px; font-size: 14px; }
+  .shop-top span { color: var(--muted); white-space: nowrap; }
+  .shop-items { font-size: 13px; color: var(--muted); margin: 4px 0 8px; line-height: 1.5; }
+  .shop-sum { display: flex; justify-content: space-between; gap: 8px; font-size: 14px; font-weight: 600; }
+  .shop-sum .free { color: var(--sage); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .shop-sum .free { color: #A3BB9B; } }
+  .plan-total { display: flex; justify-content: space-between; align-items: baseline; padding: 6px 4px 0; }
+  .plan-total b { font-size: 22px; font-weight: 600; color: var(--accent-ink); }
+  .plan figcaption { margin-top: 10px; font-size: 12px; color: var(--muted); text-align: center; }
 
   .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
   .gallery figure { margin: 0; }
@@ -285,6 +305,47 @@
           <figure><div class="phone"><img src="assets/img/mapa-en.jpg" alt="Map with place pins around Kraków; visited places have a green check mark, and the selected swimming area has an amber ring and a card at the bottom" width="540" height="960" loading="lazy"></div><figcaption>Map of the area</figcaption></figure>
           <figure><div class="phone"><img src="assets/img/zamek-en.jpg" alt="Place card of Wawel Royal Castle with Log visit and Add from photo buttons" width="540" height="960" loading="lazy"></div><figcaption>Place card</figcaption></figure>
         </div>
+      </article>
+
+      <article class="project">
+        <div>
+          <div class="app-title">
+            <img class="app-icon app-icon-uniszop" src="assets/img/uniszop-icon.svg" alt="" width="56" height="56">
+            <div>
+              <h3>UniSzop</h3>
+              <span>Shopping list · free for shoppers</span>
+            </div>
+          </div>
+          <span class="status">In the making</span>
+          <p>You type your shopping list, and the app shows the online shops where you can buy the most of it at once, with the total including delivery. Starting with Polish drugstores and cosmetics.</p>
+          <ul class="features">
+            <li>The whole list at once, not product by product</li>
+            <li>Totals with delivery and free-shipping thresholds</li>
+            <li>Options: one shop, fewest shops or cheapest</li>
+            <li>No account, with clearly marked affiliate links</li>
+          </ul>
+          <div class="links">
+            <a href="uniszop/en.html">Project page</a>
+            <a href="mailto:kontakt@appstorm.eu?subject=UniSzop%20%E2%80%93%20notify%20me%20at%20launch">Notify me at launch</a>
+            <a href="uniszop/en.html#for-shops">For shops</a>
+          </div>
+        </div>
+        <figure class="plan">
+          <div class="plan-head"><b>Your list</b><span>9 items</span></div>
+          <div class="plan-tabs"><span class="on">Fewest shops · 2</span><span>Cheapest · 5</span></div>
+          <div class="shop">
+            <div class="shop-top"><b>Online drugstore A</b><span>6 items</span></div>
+            <div class="shop-items">toothpaste · mouthwash · nappies size&nbsp;4 · wet wipes · hand cream · shampoo</div>
+            <div class="shop-sum"><span>142.50 zł</span><span class="free">delivery 0 zł</span></div>
+          </div>
+          <div class="shop">
+            <div class="shop-top"><b>Online perfumery B</b><span>3 items</span></div>
+            <div class="shop-items">mascara · micellar water · SPF&nbsp;50 sunscreen</div>
+            <div class="shop-sum"><span>64.90 zł</span><span>delivery 9.99 zł</span></div>
+          </div>
+          <div class="plan-total"><span>Total with delivery</span><b>217.39 zł</b></div>
+          <figcaption>Illustrative example: 2 parcels instead of 5</figcaption>
+        </figure>
       </article>
 
       <div class="next">

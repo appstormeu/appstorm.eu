@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UniSzop – your whole shopping list in as few online shops as possible</title>
+<meta name="description" content="UniSzop is an app in the making: you type your shopping list, and it shows the online shops where you can buy the most of it at once, with the total including delivery. Fewer parcels, fewer shipping fees.">
+<meta name="theme-color" content="#0F1630">
+<link rel="canonical" href="https://appstorm.eu/uniszop/en.html">
+<link rel="alternate" hreflang="pl" href="https://appstorm.eu/uniszop/">
+<link rel="alternate" hreflang="en" href="https://appstorm.eu/uniszop/en.html">
+<link rel="alternate" hreflang="x-default" href="https://appstorm.eu/uniszop/">
+<link rel="icon" type="image/svg+xml" href="../assets/img/uniszop-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/uniszop-favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/img/uniszop-icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="UniSzop – your whole shopping list in as few shops as possible">
+<meta property="og:description" content="Type your shopping list and UniSzop shows the shops where you can buy the most of it at once – delivery included.">
+<meta property="og:image" content="https://appstorm.eu/assets/img/uniszop-icon-192.png">
+<meta property="og:image:width" content="192">
+<meta property="og:image:height" content="192">
+<meta property="og:url" content="https://appstorm.eu/uniszop/en.html">
+<style>
+  @font-face { font-family: "Open Sans"; src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "Open Sans"; src: url("../assets/fonts/OpenSans-Semibold.ttf") format("truetype"); font-weight: 600; font-display: swap; }
+
+  :root {
+    --navy: #0F1630; --navy-2: #1A237E; --ink: #1D2233; --muted: #5A6275; --sky: #E3F2FD;
+    --blue: #1E88E5; --yellow: #FFD54F; --sage: #5B7556; --bg: #FAFBFD; --card: #FFFFFF;
+    --line: #E4E8F0; --accent-ink: #1A237E; --radius: 18px; --shadow: 0 18px 40px rgba(15, 22, 48, 0.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #E7EBF5; --muted: #A9B1C4; --bg: #0B1024; --card: #131A36; --line: #232B4D;
+      --accent-ink: #FFD54F; --blue: #64B5F6; --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; }
+  .wrap { width: min(1120px, 100% - 32px); margin-inline: auto; }
+
+  header { position: sticky; top: 0; z-index: 10; background: rgba(15, 22, 48, 0.88); backdrop-filter: saturate(1.4) blur(10px); }
+  .bar { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .bar img { height: 38px; width: auto; }
+  nav { display: flex; gap: 22px; }
+  nav a { color: var(--sky); text-decoration: none; font-size: 15px; opacity: 0.85; }
+  nav a:hover { opacity: 1; color: var(--yellow); }
+  @media (max-width: 600px) { nav { gap: 14px; } nav a { font-size: 14px; } .bar img { height: 32px; } nav a.optional { display: none; } }
+
+  .hero { color: var(--sky);
+    background: radial-gradient(1100px 520px at 80% -10%, rgba(100, 181, 246, 0.28), transparent 60%),
+                linear-gradient(160deg, var(--navy) 0%, #141D45 55%, var(--navy-2) 100%); }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; padding: 64px 0 80px; }
+  .crumbs { font-size: 14px; color: rgba(227, 242, 253, 0.75); margin-bottom: 14px; }
+  .crumbs a { color: var(--sky); text-decoration: none; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; background: rgba(227, 242, 253, 0.1); border: 1px solid rgba(227, 242, 253, 0.18); font-size: 13px; letter-spacing: 0.02em; margin-bottom: 16px; }
+  .eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--yellow); box-shadow: 0 0 12px var(--yellow); }
+  .brand-row { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+  .brand-row img { width: 64px; height: 64px; }
+  .brand-row .eyebrow { margin-bottom: 0; }
+  .hero h1 { font-size: clamp(32px, 5vw, 50px); line-height: 1.12; margin: 0 0 16px; font-weight: 600; }
+  .hero h1 em { font-style: normal; color: var(--yellow); }
+  .hero p.lead { font-size: 18px; color: rgba(227, 242, 253, 0.88); max-width: 34em; margin: 0 0 26px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px; font-weight: 600; text-decoration: none; font-size: 15px; }
+  .btn-primary { background: var(--yellow); color: var(--navy); }
+  .btn-ghost { color: var(--sky); border: 1px solid rgba(227, 242, 253, 0.35); }
+  .btn-ghost:hover { border-color: var(--yellow); color: var(--yellow); }
+  @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; padding: 40px 0 56px; } }
+
+  /* Zrzuty ekranu prototypu: okno przeglądarki z wynikami, z przodu telefon z listą */
+  .shots { margin: 0; justify-self: center; width: 100%; max-width: 540px; }
+  .shots-stack { position: relative; padding-bottom: 16%; }
+  .browser { border-radius: 10px; overflow: hidden; border: 1px solid rgba(227, 242, 253, 0.18); box-shadow: 0 24px 50px rgba(0, 0, 0, 0.4); }
+  .browser-bar { display: flex; align-items: center; gap: 6px; padding: 7px 10px; background: #E9ECF1; }
+  .browser-bar i { width: 8px; height: 8px; border-radius: 50%; background: #C4CAD4; }
+  .browser-bar span { flex: 1; margin: 0 26px 0 8px; padding: 2px 10px; border-radius: 999px; background: #FFFFFF; color: #3C4352; font-size: 11px; text-align: center; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .browser-bar { background: #1F2747; }
+    :root:not([data-theme="light"]) .browser-bar i { background: #3A4470; }
+    :root:not([data-theme="light"]) .browser-bar span { background: #0B1024; color: #A9B1C4; }
+  }
+  .browser img { display: block; width: 100%; height: auto; }
+  .shots .phone { position: absolute; right: 0; bottom: 0; width: 29%; height: auto; border-radius: 16px; border: 1px solid rgba(227, 242, 253, 0.25); box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45); }
+  .shots figcaption { margin-top: 14px; font-size: 13px; color: rgba(227, 242, 253, 0.75); text-align: center; }
+
+  section { padding: 72px 0; scroll-margin-top: 64px; }
+  .kicker { color: var(--blue); font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+  h2 { font-size: clamp(26px, 3.6vw, 36px); line-height: 1.2; margin: 8px 0 12px; font-weight: 600; }
+  .section-head { max-width: 46em; margin-bottom: 32px; }
+  .section-head p { color: var(--muted); font-size: 17px; margin: 0; }
+
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media (max-width: 860px) { .grid3 { grid-template-columns: 1fr; } }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .card h3 { margin: 0 0 8px; font-size: 18px; font-weight: 600; }
+  .card p { margin: 0; color: var(--muted); }
+  .num { width: 36px; height: 36px; border-radius: 12px; display: grid; place-items: center; margin-bottom: 14px; background: var(--navy); color: var(--yellow); font-weight: 600; }
+
+  /* Dla sklepów */
+  .partner { border-radius: 28px; padding: 48px; color: var(--sky); background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%); display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 32px; align-items: center; position: relative; overflow: hidden; }
+  .partner::after { content: ""; position: absolute; right: -60px; bottom: -80px; width: 320px; height: 320px; background: url("../assets/img/appstorm-mark-light.svg") center/contain no-repeat; opacity: 0.08; }
+  .partner h2 { color: #fff; }
+  .partner p { color: rgba(227, 242, 253, 0.85); margin: 0; font-size: 17px; }
+  .partner .cta { justify-content: flex-end; position: relative; z-index: 1; }
+  @media (max-width: 860px) { .partner { grid-template-columns: 1fr; padding: 32px; } .partner .cta { justify-content: flex-start; } }
+
+  .faq details { border-bottom: 1px solid var(--line); padding: 14px 0; }
+  .faq summary { cursor: pointer; font-weight: 600; }
+  .faq p { margin: 10px 0 0; color: var(--muted); }
+  .faq a { color: var(--blue); }
+
+  footer { padding: 36px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  footer a { color: var(--blue); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a href="../en.html" aria-label="AppStorm – home page"><img src="../assets/img/appstorm-logo-horizontal-light.svg" alt="AppStorm" width="122" height="38"></a>
+    <nav aria-label="Menu">
+      <a href="#how-it-works">How it works</a>
+      <a href="#for-shops" class="optional">For shops</a>
+      <a href="#faq">FAQ</a>
+      <a href="./" lang="pl" hreflang="pl">Polski</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="crumbs"><a href="../en.html">AppStorm</a> › UniSzop</div>
+        <div class="brand-row"><img src="../assets/img/uniszop-icon.svg" alt="UniSzop" width="64" height="64"><span class="eyebrow">In the making</span></div>
+        <h1>Your whole shopping list in <em>as few shops as possible</em></h1>
+        <p class="lead">Type what you need. UniSzop finds the online shops where you can buy the most of your list at once and adds up the total, delivery included. Fewer parcels, fewer shipping fees, fewer accounts and payments. Works in your browser – on desktop and phone, nothing to install.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="mailto:kontakt@appstorm.eu?subject=UniSzop%20%E2%80%93%20notify%20me%20at%20launch">Notify me at launch</a>
+          <a class="btn btn-ghost" href="#how-it-works">How it works</a>
+        </div>
+      </div>
+      <figure class="shots">
+        <div class="shots-stack">
+          <div class="browser">
+            <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>uniszop.appstorm.eu</span></div>
+            <picture>
+              <source srcset="../assets/img/uniszop-wyniki-komputer-ciemny.png" media="(prefers-color-scheme: dark)">
+              <img src="../assets/img/uniszop-wyniki-komputer-jasny.png" width="1040" height="700" alt="UniSzop in a browser, results screen: fewest shops 249.88 zł in 2 shops, cheapest 243.87 zł in 3 shops, one shop 195.89 zł with one item missing, with each shop's basket alongside">
+            </picture>
+          </div>
+          <picture>
+            <source srcset="../assets/img/uniszop-lista-ciemny.png" media="(prefers-color-scheme: dark)">
+            <img class="phone" src="../assets/img/uniszop-lista-jasny.png" width="480" height="936" alt="The same app on a phone: a shopping list with 9 items, parcel locker delivery and a Find shops button">
+          </picture>
+        </div>
+        <figcaption>Prototype (Polish interface) with the example catalogue: shops and prices are fictional</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <section id="how-it-works">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">How it works</div>
+        <h2>From a list to an order in three steps</h2>
+        <p>Price comparison sites look for the lowest price of each product separately, which often ends in several orders from different shops. UniSzop looks at the whole list at once. We start with Polish drugstores and cosmetics.</p>
+      </div>
+      <div class="grid3">
+        <div class="card"><div class="num" aria-hidden="true">1</div><h3>Type your list</h3><p>Just like in your notes: “toothpaste”, “nappies size&nbsp;4”, “shampoo for coloured hair”. You can also paste a ready list.</p></div>
+        <div class="card"><div class="num" aria-hidden="true">2</div><h3>Compare options</h3><p>One shop, fewest shops or cheapest – always with delivery costs, free-shipping thresholds and what is missing.</p></div>
+        <div class="card"><div class="num" aria-hidden="true">3</div><h3>Buy in the shop</h3><p>You go to the chosen shops and buy as usual. You pay the same as when visiting the shop directly.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="principles" style="padding-top: 0">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Fair rules</div>
+        <h2>Clear about how we rank and how we earn</h2>
+      </div>
+      <div class="grid3">
+        <div class="card"><h3>Neutral ranking</h3><p>The order of options depends on the number of shops, prices and delivery costs. We will describe the rules in the app.</p></div>
+        <div class="card"><h3>Affiliate links</h3><p>Some links to shops are affiliate links. If you buy through them, the shop may pay us a commission – you pay the same.</p></div>
+        <div class="card"><h3>Privacy</h3><p>You don’t need an account to check a list. We don’t sell data about your shopping.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="for-shops" style="padding-top: 0">
+    <div class="wrap">
+      <div class="partner">
+        <div>
+          <div class="kicker" style="color: var(--yellow)">For shops</div>
+          <h2>Do you run an online shop?</h2>
+          <p>If you have a product feed for price comparison sites (for example in the Ceneo or Google format), you can share it with UniSzop. We also work with shops through affiliate networks.</p>
+        </div>
+        <div class="cta">
+          <a class="btn btn-primary" href="mailto:kontakt@appstorm.eu?subject=UniSzop%20%E2%80%93%20shop%20partnership">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="padding-top: 0">
+    <div class="wrap faq">
+      <div class="section-head">
+        <div class="kicker">FAQ</div>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <details><summary>When will UniSzop be available?</summary><p>We are building the first version, which will run in your browser – on desktop and phone, with no app to install. If you want to hear when it launches, <a href="mailto:kontakt@appstorm.eu?subject=UniSzop%20%E2%80%93%20notify%20me%20at%20launch">email us</a>.</p></details>
+      <details><summary>How much will it cost?</summary><p>UniSzop will be free for shoppers.</p></details>
+      <details><summary>Do I buy in UniSzop?</summary><p>No. UniSzop suggests where to buy; you place the order directly in the shop, on its terms and with its customer service.</p></details>
+      <details><summary>Where do the prices come from?</summary><p>From product feeds that shops share with price comparison sites and affiliate networks. Prices and availability may change, so check them in the shop before buying.</p></details>
+      <details><summary>How do you make money?</summary><p>From commissions that shops pay for orders placed through our affiliate links. It does not change the price you pay.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 AppStorm Tomasz Jagielski · <a href="../en.html">appstorm.eu</a></span>
+    <span><a href="./" lang="pl" hreflang="pl">Wersja polska</a></span>
+    <span>This site uses no cookies and no analytics.</span>
+  </div>
+</footer>
+
+</body>
+</html>

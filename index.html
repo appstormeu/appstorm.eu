@@ -136,6 +136,26 @@
   .links { display: flex; flex-wrap: wrap; gap: 16px; font-size: 14px; }
   .links a { color: var(--blue); text-decoration: none; font-weight: 600; }
   .links a:hover { text-decoration: underline; }
+  .project + .project { margin-top: 24px; }
+  .app-icon-uniszop { background: none; }
+
+  /* UniSzop: przykładowy plan zakupów */
+  .plan { margin: 0; justify-self: center; width: 100%; max-width: 380px; padding: 20px; border-radius: 22px; background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); }
+  .plan-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+  .plan-head span { color: var(--muted); font-size: 14px; }
+  .plan-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+  .plan-tabs span { font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+  .plan-tabs .on { background: var(--yellow); border-color: var(--yellow); color: var(--navy); }
+  .shop { border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; margin-bottom: 10px; }
+  .shop-top { display: flex; justify-content: space-between; gap: 8px; font-size: 14px; }
+  .shop-top span { color: var(--muted); white-space: nowrap; }
+  .shop-items { font-size: 13px; color: var(--muted); margin: 4px 0 8px; line-height: 1.5; }
+  .shop-sum { display: flex; justify-content: space-between; gap: 8px; font-size: 14px; font-weight: 600; }
+  .shop-sum .free { color: var(--sage); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .shop-sum .free { color: #A3BB9B; } }
+  .plan-total { display: flex; justify-content: space-between; align-items: baseline; padding: 6px 4px 0; }
+  .plan-total b { font-size: 22px; font-weight: 600; color: var(--accent-ink); }
+  .plan figcaption { margin-top: 10px; font-size: 12px; color: var(--muted); text-align: center; }
 
   .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
   .gallery figure { margin: 0; }
@@ -287,6 +307,47 @@
           <figure><div class="phone"><img src="assets/img/mapa.jpg" alt="Mapa z pinezkami miejsc wokół Krakowa; odwiedzone mają zielony znaczek, a wybrane kąpielisko ma bursztynową obwódkę i kartę na dole" width="540" height="960" loading="lazy"></div><figcaption>Mapa okolicy</figcaption></figure>
           <figure><div class="phone"><img src="assets/img/zamek.jpg" alt="Karta Zamku Królewskiego na Wawelu z przyciskami Zalicz wizytę i Dodaj ze zdjęcia" width="540" height="960" loading="lazy"></div><figcaption>Karta miejsca</figcaption></figure>
         </div>
+      </article>
+
+      <article class="project">
+        <div>
+          <div class="app-title">
+            <img class="app-icon app-icon-uniszop" src="assets/img/uniszop-icon.svg" alt="" width="56" height="56">
+            <div>
+              <h3>UniSzop</h3>
+              <span>Lista zakupów · bezpłatna dla kupujących</span>
+            </div>
+          </div>
+          <span class="status">W przygotowaniu</span>
+          <p>Wpisujesz listę zakupów, a aplikacja wskazuje sklepy internetowe, w których kupisz najwięcej naraz, i liczy koszt razem z dostawą. Na start: drogeria i kosmetyki.</p>
+          <ul class="features">
+            <li>Cała lista naraz, a nie produkt po produkcie</li>
+            <li>Koszt z dostawą i progami darmowej wysyłki</li>
+            <li>Warianty: jeden sklep, najmniej sklepów albo najtaniej</li>
+            <li>Bez konta, z jawnie oznaczonymi linkami partnerskimi</li>
+          </ul>
+          <div class="links">
+            <a href="uniszop/">Strona projektu</a>
+            <a href="mailto:kontakt@appstorm.eu?subject=UniSzop%20%E2%80%93%20powiadom%20mnie%20o%20starcie">Powiadom mnie o starcie</a>
+            <a href="uniszop/#dla-sklepow">Dla sklepów</a>
+          </div>
+        </div>
+        <figure class="plan">
+          <div class="plan-head"><b>Twoja lista</b><span>9 pozycji</span></div>
+          <div class="plan-tabs"><span class="on">Najmniej sklepów · 2</span><span>Najtaniej · 5</span></div>
+          <div class="shop">
+            <div class="shop-top"><b>Drogeria internetowa A</b><span>6 pozycji</span></div>
+            <div class="shop-items">pasta do zębów · płyn do płukania · pieluchy&nbsp;4 · chusteczki nawilżane · krem do rąk · szampon</div>
+            <div class="shop-sum"><span>142,50 zł</span><span class="free">dostawa 0 zł</span></div>
+          </div>
+          <div class="shop">
+            <div class="shop-top"><b>Perfumeria internetowa B</b><span>3 pozycje</span></div>
+            <div class="shop-items">tusz do rzęs · płyn micelarny · krem z filtrem SPF&nbsp;50</div>
+            <div class="shop-sum"><span>64,90 zł</span><span>dostawa 9,99 zł</span></div>
+          </div>
+          <div class="plan-total"><span>Razem z dostawą</span><b>217,39 zł</b></div>
+          <figcaption>Przykład poglądowy: 2 paczki zamiast 5</figcaption>
+        </figure>
       </article>
 
       <div class="next">
